@@ -1,9 +1,10 @@
-import type { NextPage } from 'next'
+import { Initial } from '../components/Home'
+import { Container } from './style'
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
-    <h1>Helow World</h1>
+    <Container>
+      <Initial />
+    </Container>
   )
 }
-
-export default Home
