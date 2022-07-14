@@ -48,4 +48,11 @@ export default createGlobalStyle`
   span {
     color: var(--gray-500);
   }
+
+  .title {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 1.5rem;
+  }
 `

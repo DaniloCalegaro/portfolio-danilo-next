@@ -25,7 +25,7 @@ export function Initial() {
       </div>
 
       <div className="imgProfile">
-        <img src="/images/bg_home.png" alt="foto Danilo" />
+        {/* <img src="/images/bg_home.png" alt="foto Danilo" /> */}
       </div>
 
       <div className="backgroundDev">
