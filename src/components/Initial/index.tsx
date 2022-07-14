@@ -27,12 +27,6 @@ export function Initial() {
       <div className="imgProfile">
         {/* <img src="/images/bg_home.png" alt="foto Danilo" /> */}
       </div>
-
-      <div className="btnScroll">
-        <a href="">
-          <ButtonScroll />
-        </a>
-      </div>
     </Container>
   )
 }

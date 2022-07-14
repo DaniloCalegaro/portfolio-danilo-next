@@ -5,4 +5,29 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 0 1.5rem;
   //border: solid 1px; ;
+
+  .buttonsControl {
+    .btnScrool {
+      margin: 0 2rem;
+      position: fixed;
+      bottom: 1rem;
+      right: calc(100vw / 2);
+      z-index: 10;
+    }
+
+    .btnContactMe {
+      margin: 0 1rem;
+      position: fixed;
+      bottom: 1rem;
+      left: 0;
+      z-index: 10;
+    }
+    .btnUp {
+      margin: 0 1rem;
+      position: fixed;
+      bottom: 1rem;
+      right: 0;
+      z-index: 10;
+    }
+  }
 `

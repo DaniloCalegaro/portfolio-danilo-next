@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 1rem;
-  height: 2rem;
+  width: 1.1rem;
+  height: 1.7rem;
   border: solid 2px var(--magenta);
   border-radius: 8px;
 
@@ -32,7 +32,7 @@ export const Container = styled.div`
       transform: translateY(0);
     }
     100% {
-      transform: translateY(-10px);
+      transform: translateY(-7px);
     }
   }
 `

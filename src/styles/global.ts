@@ -25,18 +25,22 @@ export default createGlobalStyle`
       font-size: 87.5%;
     }
   }
+
   body {
     background: var(--white);
     color: var(--gray-500);
     -webkit-font-smoothing: antialiased;
   }
+
   body, input, button {
     font-family: 'Poppins', sans-serif;
     font-size: 0.875rem;
   }
+
   h1, h2, h3, h4, h5, h6, strong {
     font-weight: 800;
   }
+
   button, a {
     cursor: pointer;
   }

@@ -1,15 +1,14 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.section`
   display: flex;
   flex-direction: column;
 
   .info {
-    max-width: 50vw;
-    //margin-top: 38vh;
+    max-width: 100vw;
 
-    //margin-top: max(7.8rem, calc(100vh - 450px));
-    margin-top: min(20rem, calc(100vh - 450px));
+    margin-top: max(7.8rem, calc(100vh - 400px));
+    //margin-top: min(20rem, calc(100vh - 400px));
 
     span {
       display: block;
@@ -21,8 +20,8 @@ export const Container = styled.div`
     }
 
     > strong {
-      font-size: 3.875rem;
-      line-height: 4.5rem;
+      font-size: 3rem;
+      line-height: 3.4rem;
       color: var(--black);
     }
 
@@ -59,29 +58,57 @@ export const Container = styled.div`
     z-index: -1;
 
     img {
-      width: 500px;
+      width: 400px;
     }
   }
 
-  .btnScroll {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  @media (max-width: 600px) {
+  @media (min-width: 720px) {
     .info {
-      max-width: 100vw;
+      max-width: 70vw;
 
       > strong {
-        font-size: 3rem;
-        line-height: 3.4rem;
+        font-size: 3.75rem;
+        line-height: 4rem;
       }
     }
 
     .imgProfile {
       img {
-        width: 400px;
+        width: 700px;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .info {
+      max-width: 50vw;
+
+      > strong {
+        font-size: 3.75rem;
+        line-height: 4rem;
+      }
+    }
+
+    .imgProfile {
+      img {
+        width: 800px;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .info {
+      max-width: 35vw;
+
+      > strong {
+        font-size: 3.75rem;
+        line-height: 4rem;
+      }
+    }
+
+    .imgProfile {
+      img {
+        width: 900px;
       }
     }
   }
