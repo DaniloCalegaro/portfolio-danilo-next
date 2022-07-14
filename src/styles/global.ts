@@ -28,7 +28,7 @@ export default createGlobalStyle`
 
   body {
     background: var(--white);
-    color: var(--gray-500);
+    color: var(--black);
     -webkit-font-smoothing: antialiased;
   }
 
@@ -43,5 +43,9 @@ export default createGlobalStyle`
 
   button, a {
     cursor: pointer;
+  }
+
+  span {
+    color: var(--gray-500);
   }
 `

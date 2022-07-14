@@ -22,8 +22,6 @@ export const Container = styled.div`
 
     strong {
       font-size: 1.2rem;
-      color: var(--black);
-
       transition: color 0.2s;
     }
   }
@@ -32,8 +30,6 @@ export const Container = styled.div`
     strong {
       display: block;
       font-size: 1.4rem;
-      color: var(--black);
-
       transition: color 0.2s;
     }
 

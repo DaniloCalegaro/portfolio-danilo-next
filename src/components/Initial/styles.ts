@@ -62,6 +62,23 @@ export const Container = styled.section`
     }
   }
 
+  .backgroundDev {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    z-index: -2;
+
+    strong {
+      font-size: calc(18vw);
+      color: var(--white);
+      text-shadow: 0px 0px 80px rgba(0, 0, 0, 0.1);
+    }
+  }
+
   @media (min-width: 720px) {
     .info {
       max-width: 70vw;

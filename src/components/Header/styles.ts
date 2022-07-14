@@ -13,15 +13,14 @@ export const Container = styled.div`
   .menu {
     display: flex;
     align-items: center;
+
     strong {
       margin-right: 0.8rem;
-      color: var(--black);
       letter-spacing: 3px;
     }
 
     i {
       svg {
-        color: var(--black);
         transition: color, transform 0.2s;
       }
     }
