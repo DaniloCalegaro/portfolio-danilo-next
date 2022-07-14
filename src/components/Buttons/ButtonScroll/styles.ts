@@ -1,0 +1,38 @@
+import styled from 'styled-components'
+
+export const Container = styled.div`
+  width: 1rem;
+  height: 2rem;
+  border: solid 2px var(--magenta);
+  border-radius: 8px;
+
+  /* display: flex;
+  justify-content: center; */
+  position: relative;
+
+  &::after {
+    content: '';
+    background: var(--magenta);
+    width: 0.2rem;
+    height: 0.5rem;
+    border-radius: 3px;
+
+    position: absolute;
+    bottom: 0.3rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+      alternate-reverse both;
+  }
+
+  @keyframes slide-top {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+`
