@@ -41,6 +41,11 @@ export default createGlobalStyle`
     font-weight: 800;
   }
 
+  a {
+    text-decoration: none;
+    color: var(--black);
+  }
+
   button, a {
     cursor: pointer;
   }
