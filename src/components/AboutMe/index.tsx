@@ -4,7 +4,7 @@ export function AboutMe() {
   return (
     <Container>
       <div className="wordsAbout">
-        <span className="title">Algumas palavras sobre mim</span>
+        <span className="index">Algumas palavras sobre mim</span>
         <strong>
           Sou Danilo Calegaro, um desenvolvedor front-end que está
           constantemente antenado à novas tendências tecnológicas, formado em
@@ -20,7 +20,7 @@ export function AboutMe() {
       </div>
 
       <div className="skillsComponent">
-        <span className="title">Habilidades e competências</span>
+        <span className="index">Habilidades e competências</span>
 
         <div className="skills">
           <ul>

@@ -49,10 +49,34 @@ export default createGlobalStyle`
     color: var(--gray-500);
   }
 
-  .title {
+  section + section {
+    margin-top: 4rem;
+  }
+
+  .index {
       font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 3px;
       margin-bottom: 1.5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    line-height: 3.4rem;
+    color: var(--black);
+  }
+
+  @media (min-width: 720px) {
+    .title {
+      font-size: 3.75rem;
+      line-height: 4rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .title {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
   }
 `

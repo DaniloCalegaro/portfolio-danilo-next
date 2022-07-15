@@ -19,12 +19,6 @@ export const Container = styled.section`
       color: var(--black);
     }
 
-    > strong {
-      font-size: 3rem;
-      line-height: 3.4rem;
-      color: var(--black);
-    }
-
     > p {
       font-size: 1.2rem;
       font-weight: 500;
@@ -82,11 +76,6 @@ export const Container = styled.section`
   @media (min-width: 720px) {
     .info {
       max-width: 70vw;
-
-      > strong {
-        font-size: 3.75rem;
-        line-height: 4rem;
-      }
     }
 
     .imgProfile {
@@ -99,11 +88,6 @@ export const Container = styled.section`
   @media (min-width: 1280px) {
     .info {
       max-width: 50vw;
-
-      > strong {
-        font-size: 3.75rem;
-        line-height: 4rem;
-      }
     }
 
     .imgProfile {
@@ -116,11 +100,6 @@ export const Container = styled.section`
   @media (min-width: 1440px) {
     .info {
       max-width: 35vw;
-
-      > strong {
-        font-size: 3.75rem;
-        line-height: 4rem;
-      }
     }
 
     .imgProfile {

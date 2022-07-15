@@ -6,7 +6,7 @@ export function Initial() {
     <Container>
       <div className="info">
         <span>Danilo Calegaro</span>
-        <strong>Desenvolvedor Front End</strong>
+        <strong className="title">Desenvolvedor Front End</strong>
         <p>
           Nos últimos 15 anos como designer de produto e a agora como
           desenvolvedor front-end

@@ -4,11 +4,10 @@ export const Container = styled.div`
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  //border: solid 1px; ;
+  //border: solid 1px;
 
   .buttonsControl {
     .btnScrool {
-      margin: 0 2rem;
       position: fixed;
       bottom: 1rem;
       right: calc(100vw / 2);

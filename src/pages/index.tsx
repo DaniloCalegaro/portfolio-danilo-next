@@ -3,6 +3,7 @@ import { ButtonContactMe } from '../components/Buttons/ButtonContactMe'
 import { ButtonScroll } from '../components/Buttons/ButtonScroll'
 import { ButtonUp } from '../components/Buttons/ButtonUp'
 import { Initial } from '../components/Initial'
+import { ProjectsSelected } from '../components/ProjectsSelected'
 import { Container } from './style'
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
     <Container>
       <Initial />
       <AboutMe />
+      <ProjectsSelected />
 
       <section className="buttonsControl">
         {/* <div className="btnContactMe">

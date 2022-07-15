@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-  margin-top: 4rem;
+  //margin-top: 4rem;
 
   .wordsAbout {
     display: flex;
