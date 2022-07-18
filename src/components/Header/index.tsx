@@ -1,10 +1,10 @@
 import { Logo } from '../Logo'
-import { Container } from './styles'
+import { ContainerHeader } from './styles'
 import { List } from 'phosphor-react'
 
 export function Header() {
   return (
-    <Container>
+    <ContainerHeader>
       <Logo />
       <nav className="menu">
         <strong>MENU</strong>
@@ -14,6 +14,6 @@ export function Header() {
           </i>
         </a>
       </nav>
-    </Container>
+    </ContainerHeader>
   )
 }

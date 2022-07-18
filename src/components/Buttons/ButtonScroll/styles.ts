@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const ContainerBtnScroll = styled.div`
   width: 1.1rem;
   height: 1.7rem;
   border: solid 2px var(--magenta);

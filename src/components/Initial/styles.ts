@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.section`
+export const ContainerInitial = styled.section`
   display: flex;
   flex-direction: column;
 
@@ -8,7 +8,6 @@ export const Container = styled.section`
     max-width: 100vw;
 
     margin-top: max(7.8rem, calc(100vh - 400px));
-    //margin-top: min(20rem, calc(100vh - 400px));
 
     span {
       display: block;

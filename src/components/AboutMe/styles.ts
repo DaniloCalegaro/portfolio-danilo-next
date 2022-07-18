@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.section`
+export const ContainerAboutMe = styled.section`
   //margin-top: 4rem;
 
   .wordsAbout {

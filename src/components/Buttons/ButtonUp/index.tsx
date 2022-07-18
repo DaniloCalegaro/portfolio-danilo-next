@@ -1,10 +1,10 @@
 import { ArrowUp } from 'phosphor-react'
-import { Container } from './style'
+import { ContainerBtnUp } from './style'
 
 export function ButtonUp() {
   return (
-    <Container>
+    <ContainerBtnUp>
       <ArrowUp size="20" weight="bold" />
-    </Container>
+    </ContainerBtnUp>
   )
 }

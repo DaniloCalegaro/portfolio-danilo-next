@@ -1,5 +1,5 @@
 import { AboutMe } from '../components/AboutMe'
-import { ButtonContactMe } from '../components/Buttons/ButtonContactMe'
+import { ButtonRedirect } from '../components/Buttons/ButtonRedirect'
 import { ButtonScroll } from '../components/Buttons/ButtonScroll'
 import { ButtonUp } from '../components/Buttons/ButtonUp'
 import { Initial } from '../components/Initial'
@@ -17,7 +17,7 @@ export default function Home() {
 
       <section className="buttonsControl">
         {/* <div className="btnContactMe">
-          <ButtonContactMe />
+          <ButtonRedirect />
         </div> */}
         <div className="btnScrool">
           <ButtonScroll />

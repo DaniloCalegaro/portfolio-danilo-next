@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const ContainerLogo = styled.div`
   line-height: 1.2;
   display: flex;
   align-items: center;

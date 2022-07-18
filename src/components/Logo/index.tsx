@@ -1,8 +1,8 @@
-import { Container } from './styles'
+import { ContainerLogo } from './styles'
 
 export function Logo() {
   return (
-    <Container>
+    <ContainerLogo>
       <div className="logo">
         <strong>DC</strong>
       </div>
@@ -10,6 +10,6 @@ export function Logo() {
         <strong>Danilo Calegaro</strong>
         <span>Front-end developer</span>
       </div>
-    </Container>
+    </ContainerLogo>
   )
 }

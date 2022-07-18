@@ -1,14 +1,16 @@
-import { Container, SwiperBox } from './styles'
+import { ContainerProjectsSelected, SwiperBox } from './styles'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Mousewheel, Navigation, Pagination } from 'swiper'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+import { ButtonRedirect } from '../Buttons/ButtonRedirect'
+import { GithubLogo } from 'phosphor-react'
 
 export function ProjectsSelected() {
   return (
-    <Container>
+    <ContainerProjectsSelected>
       <span className="index">Projetos selecionados</span>
       <strong className="title">Estudos front-end</strong>
 
@@ -59,6 +61,14 @@ export function ProjectsSelected() {
           </SwiperSlide>
         </Swiper>
       </SwiperBox>
-    </Container>
+
+      <div className="buttonMoreProjects">
+        <ButtonRedirect
+          icon={<GithubLogo size={20} />}
+          name="Ver todos"
+          url="#"
+        />
+      </div>
+    </ContainerProjectsSelected>
   )
 }

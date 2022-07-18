@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const ContainerBtnUp = styled.div`
   background: var(--gray-500);
   opacity: 0.6;
   padding: 1rem;

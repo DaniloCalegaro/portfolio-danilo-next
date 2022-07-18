@@ -1,15 +1,15 @@
-import { Container } from './styles'
+import { ContainerAboutMe } from './styles'
 
 export function AboutMe() {
   return (
-    <Container>
+    <ContainerAboutMe>
       <div className="wordsAbout">
         <span className="index">Algumas palavras sobre mim</span>
         <strong>
           Sou Danilo Calegaro, um desenvolvedor front-end que está
           constantemente antenado à novas tendências tecnológicas, formado em
-          Sistemasde Informação, fiz cursos técnicos emDesenvolvimento Web pela
-          Rocketseat, IGTI e Digital Innovation One.
+          Sistemasde Informação, fiz cursos técnicos em Desenvolvimento Web pela
+          Rocketseat, IGTI, Digital Innovation One e entre outras instituições.
         </strong>
         <span>
           Como desenvolvedor sou apaixonado em aplicar minha habilidades para
@@ -34,6 +34,6 @@ export function AboutMe() {
           </ul>
         </div>
       </div>
-    </Container>
+    </ContainerAboutMe>
   )
 }

@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 
-export const Container = styled.section`
+export const ContainerProjectsSelected = styled.section`
   > span {
     display: block;
+  }
+
+  .buttonMoreProjects {
+    float: right;
   }
 `
 
