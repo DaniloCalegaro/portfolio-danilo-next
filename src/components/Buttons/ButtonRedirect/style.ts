@@ -5,7 +5,7 @@ export const ContainerBtnContactMe = styled.div`
   padding: 0.5rem 1rem;
   border-radius: 2rem;
 
-  transition: background-color, transform 0.2s;
+  transition: background-color 0.2s;
 
   a {
     color: var(--white);
@@ -20,7 +20,6 @@ export const ContainerBtnContactMe = styled.div`
   }
 
   &:hover {
-    transform: scale(1.05);
     background-color: var(--magenta);
   }
 `
