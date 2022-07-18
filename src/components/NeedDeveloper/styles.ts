@@ -6,15 +6,18 @@ export const ContainerNeedDeveloper = styled.section`
   align-items: center;
 
   strong {
+    cursor: pointer;
     display: inline-block;
     font-size: 3.2rem;
     transition: transform 0.2s;
     //color: transparent;
     //-webkit-text-stroke: 1px var(--black);
+    transition: color 0.2s;
   }
 
   strong:hover {
-    transform: scale(1.05);
+    //transform: scale(1.05);
+    color: var(--gray-500);
   }
 
   svg {
@@ -38,6 +41,10 @@ export const ContainerNeedDeveloper = styled.section`
     strong:hover::after {
       width: 100%;
       opacity: 1;
+    }
+
+    strong:hover {
+      color: var(--black);
     }
   }
 `
