@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app'
+import { Copyright } from '../components/Copyright'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 
@@ -11,6 +12,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Header />
       <Component {...pageProps} />
       <Footer />
+      <Copyright />
     </>
   )
 }
