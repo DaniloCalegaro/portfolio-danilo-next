@@ -18,6 +18,8 @@ export default createGlobalStyle`
   }
 
   html {
+    scroll-behavior: smooth;
+    
     @media (max-width: 1000px) {
       font-size: 93.75%;
     }

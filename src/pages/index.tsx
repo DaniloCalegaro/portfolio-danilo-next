@@ -1,3 +1,4 @@
+import { motion, useScroll, useSpring } from 'framer-motion'
 import { AboutMe } from '../components/AboutMe'
 import { ButtonRedirect } from '../components/Buttons/ButtonRedirect'
 import { ButtonScroll } from '../components/Buttons/ButtonScroll'
@@ -9,8 +10,16 @@ import { ProjectsSelected } from '../components/ProjectsSelected'
 import { Container } from './style'
 
 export default function Home() {
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  })
+
   return (
     <Container>
+      <motion.div className="progress-bar" style={{ scaleX }} />
       <Initial />
       <AboutMe />
       <ProjectsSelected />

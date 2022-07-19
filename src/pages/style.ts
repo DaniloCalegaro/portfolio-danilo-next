@@ -29,4 +29,15 @@ export const Container = styled.div`
       z-index: 10;
     }
   }
+
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--magenta);
+    transform-origin: 0%;
+    z-index: 10;
+  }
 `
