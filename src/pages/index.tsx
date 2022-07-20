@@ -8,7 +8,7 @@ import { Copyright } from '../components/Copyright'
 import { Initial } from '../components/Initial'
 import { NeedDeveloper } from '../components/NeedDeveloper'
 import { ProjectsSelected } from '../components/ProjectsSelected'
-import { disappear } from '../motion/variants'
+import { disappear, moveUp } from '../motion/variants'
 import { Container } from './style'
 
 export default function Home() {
@@ -49,9 +49,14 @@ export default function Home() {
           <ButtonScroll />
         </motion.div>
 
-        {/* <div className="btnUp">
+        <motion.div
+          className="btnUp"
+          initial={'startscreen'}
+          animate={positionPage < 24 ? 'startscreen' : 'movescreen'}
+          variants={moveUp}
+        >
           <ButtonUp />
-        </div> */}
+        </motion.div>
       </section>
     </Container>
   )
