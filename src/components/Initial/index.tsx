@@ -1,7 +1,6 @@
+import { ContainerInitial } from './styles'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../../motion/variants'
-
-import { ContainerInitial } from './styles'
 
 export function Initial() {
   return (
@@ -34,9 +33,13 @@ export function Initial() {
         </motion.div>
       </motion.div>
 
-      <div className="imgProfile">
-        {/* <img src="/images/bg_home.png" alt="foto Danilo" /> */}
-      </div>
+      <motion.div
+        className="imgProfile"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        <img src="/images/bg_home.png" alt="foto Danilo" />
+      </motion.div>
 
       <div className="backgroundDev">
         <strong>developer</strong>
