@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
-export const ContainerLogo = styled.div`
+type Props = {
+  isBaseDark: boolean
+}
+export const ContainerLogo = styled.div<Props>`
   line-height: 1.2;
   display: flex;
   align-items: center;
@@ -9,7 +12,10 @@ export const ContainerLogo = styled.div`
   .logo {
     margin-right: 1rem;
     padding: 0.3rem;
-    border: solid 3px var(--black);
+    border: ${props =>
+      props.isBaseDark
+        ? 'solid 3px var(--gray-500)'
+        : 'solid 3px var(--black)'};
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
@@ -22,6 +28,8 @@ export const ContainerLogo = styled.div`
 
     strong {
       font-size: 1.2rem;
+      color: ${props =>
+        props.isBaseDark ? 'var(--gray-500)' : 'var(--black)'};
       transition: color 0.2s;
     }
   }
@@ -30,6 +38,8 @@ export const ContainerLogo = styled.div`
     strong {
       display: block;
       font-size: 1.4rem;
+      color: ${props =>
+        props.isBaseDark ? 'var(--gray-500)' : 'var(--black)'};
       transition: color 0.2s;
     }
 
@@ -37,7 +47,8 @@ export const ContainerLogo = styled.div`
       text-transform: uppercase;
       font-size: 0.7rem;
       letter-spacing: 3px;
-      color: var(--black);
+      color: ${props =>
+        props.isBaseDark ? 'var(--gray-500)' : 'var(--black)'};
 
       transition: color 0.2s;
     }
@@ -45,20 +56,24 @@ export const ContainerLogo = styled.div`
 
   &:hover {
     .logo {
-      border-color: var(--gray-500);
+      border-color: ${props =>
+        props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
 
       strong {
-        color: var(--gray-500);
+        color: ${props =>
+          props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
       }
     }
 
     .info {
       strong {
-        color: var(--gray-500);
+        color: ${props =>
+          props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
       }
 
       span {
-        color: var(--gray-500);
+        color: ${props =>
+          props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
       }
     }
   }

@@ -7,7 +7,7 @@ import { ContainerNeedDeveloper } from './styles'
 
 export function NeedDeveloper() {
   return (
-    <ContainerNeedDeveloper>
+    <ContainerNeedDeveloper id="needDeveloper">
       <motion.div
         variants={fadeIn('up')}
         initial="offscreen"

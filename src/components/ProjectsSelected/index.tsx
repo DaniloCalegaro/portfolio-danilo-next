@@ -13,7 +13,7 @@ import { GithubLogo } from 'phosphor-react'
 
 export function ProjectsSelected() {
   return (
-    <ContainerProjectsSelected>
+    <ContainerProjectsSelected id="projects">
       <motion.div
         className="info"
         variants={fadeIn('up')}

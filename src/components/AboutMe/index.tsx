@@ -5,7 +5,7 @@ import { ContainerAboutMe } from './styles'
 
 export function AboutMe() {
   return (
-    <ContainerAboutMe>
+    <ContainerAboutMe id="aboutMe">
       <motion.div
         className="wordsAbout"
         variants={fadeIn('up')}

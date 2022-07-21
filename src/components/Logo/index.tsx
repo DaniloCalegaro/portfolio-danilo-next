@@ -1,8 +1,12 @@
 import { ContainerLogo } from './styles'
 
-export function Logo() {
+interface LogoProps {
+  isBaseDark?: boolean
+}
+
+export function Logo({ isBaseDark = false }: LogoProps) {
   return (
-    <ContainerLogo>
+    <ContainerLogo isBaseDark={isBaseDark}>
       <div className="logo">
         <strong>DC</strong>
       </div>
