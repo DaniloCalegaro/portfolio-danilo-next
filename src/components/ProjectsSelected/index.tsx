@@ -10,8 +10,28 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import { ButtonRedirect } from '../Buttons/ButtonRedirect'
 import { GithubLogo } from 'phosphor-react'
+import { useEffect, useState } from 'react'
+import { apiGithub } from '../../services/apiGithub'
+
+interface ApiGithubRepos {
+  id: string
+  name: string
+}
 
 export function ProjectsSelected() {
+  const [repositories, setRepositories] = useState<ApiGithubRepos>()
+
+  useEffect(() => {
+    async function projectsGitHub() {
+      const response = await apiGithub.get<ApiGithubRepos>(
+        '/users/DaniloCalegaro/repos'
+      )
+      setRepositories(response.data)
+    }
+
+    projectsGitHub()
+  }, [])
+
   return (
     <ContainerProjectsSelected id="projects">
       <motion.div
@@ -52,37 +72,6 @@ export function ProjectsSelected() {
             modules={[Pagination, Navigation, Mousewheel]}
           >
             <SwiperSlide key="1">
-              <div className="infoProjects">
-                <span className="index">2022</span>
-                <strong>Dashgo - Next | Chakra-ui</strong>
-              </div>
-              <img
-                src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide key="2">
-              <div className="infoProjects">
-                <span className="index">2022</span>
-                <strong>Dashgo - Next | Chakra-ui</strong>
-              </div>
-
-              <img
-                src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide key="3">
-              <div className="infoProjects">
-                <span className="index">2022</span>
-                <strong>Dashgo - Next | Chakra-ui</strong>
-              </div>
-              <img
-                src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide key="4">
               <div className="infoProjects">
                 <span className="index">2022</span>
                 <strong>Dashgo - Next | Chakra-ui</strong>

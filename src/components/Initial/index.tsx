@@ -38,7 +38,7 @@ export function Initial() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        <img src="/images/bg_home.png" alt="foto Danilo" />
+        {/* <img src="/images/bg_home.png" alt="foto Danilo" /> */}
       </motion.div>
 
       <div className="backgroundDev">
