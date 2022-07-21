@@ -9,6 +9,7 @@ export function Header() {
   return (
     <ContainerHeader>
       <motion.nav
+        id="header"
         variants={fadeIn('down')}
         initial="offscreen"
         whileInView="onscreen"

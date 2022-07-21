@@ -30,7 +30,13 @@ export function AboutMe() {
         </motion.span>
       </motion.div>
 
-      <div className="skillsComponent">
+      <motion.div
+        className="skillsComponent"
+        variants={fadeIn('up')}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.0 }}
+      >
         <motion.span className="index" variants={fadeIn('up')}>
           Habilidades e competências
         </motion.span>
@@ -46,7 +52,7 @@ export function AboutMe() {
             <li>Photoshop, CorelDraw</li>
           </ul>
         </motion.div>
-      </div>
+      </motion.div>
     </ContainerAboutMe>
   )
 }

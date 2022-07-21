@@ -4,7 +4,9 @@ import { ContainerBtnUp } from './style'
 export function ButtonUp() {
   return (
     <ContainerBtnUp>
-      <ArrowUp size="20" weight="bold" />
+      <a href="#header">
+        <ArrowUp size="20" weight="bold" />
+      </a>
     </ContainerBtnUp>
   )
 }
