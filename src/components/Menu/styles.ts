@@ -1,6 +1,27 @@
 import styled from 'styled-components'
 
 export const ContainerMenuSideBar = styled.div`
+  > a {
+    display: flex;
+    gap: 0.5rem;
+
+    span {
+      color: var(--black);
+      font-weight: 500;
+    }
+
+    svg {
+      color: var(--white);
+      transition: color 0.2s;
+    }
+
+    &:hover {
+      svg {
+        color: var(--magenta);
+      }
+    }
+  }
+
   nav {
     position: fixed;
     top: 0;
@@ -39,7 +60,6 @@ export const ContainerMenuSideBar = styled.div`
         }
       }
     }
-
     span {
       margin-top: 1rem;
     }

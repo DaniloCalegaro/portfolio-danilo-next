@@ -47,3 +47,22 @@ export const riseup: Variants = {
     }
   }
 }
+
+export const moveMenu: Variants = {
+  initial: { height: 0 },
+  animate: {
+    height: '100%',
+    transition: { duration: 0.2 }
+  },
+  exit: {
+    height: 0,
+    transition: { delay: 0.3, duration: 0.3 }
+  }
+}
+
+export const moveMenuItemVariants: Variants = {
+  closed: {
+    opacity: 0
+  },
+  open: { opacity: 1 }
+}
