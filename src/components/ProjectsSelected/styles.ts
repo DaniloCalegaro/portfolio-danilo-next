@@ -29,18 +29,38 @@ export const SwiperBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
+    position: relative;
+
+    .infoProjects {
+      position: absolute;
+      left: 0;
+      padding: 1rem;
+
+      span {
+        font-size: 0.8rem;
+      }
+      strong {
+        color: var(--white);
+        display: block;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 90%;
+      object-fit: cover;
+
+      z-index: -2;
+    }
+
+    //position: relative;
   }
 
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 90%;
-    object-fit: cover;
-
-    z-index: -2;
-  }
-
-  .swiper-pagination-bullet-active {
+  .swiper-slide .swiper-pagination-bullet-active {
     background: var(--magenta);
   }
 

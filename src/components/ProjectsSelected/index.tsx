@@ -32,14 +32,16 @@ export function ProjectsSelected() {
           <Swiper
             breakpoints={{
               640: {
-                slidesPerView: 1
+                slidesPerView: 1,
+                slidesPerGroup: 1
               },
               768: {
-                slidesPerView: 2
+                slidesPerView: 2,
+                slidesPerGroup: 2
               }
             }}
             spaceBetween={30}
-            slidesPerGroup={2}
+            //slidesPerGroup={2}
             loop={false}
             loopFillGroupWithBlank={false}
             pagination={{
@@ -50,24 +52,41 @@ export function ProjectsSelected() {
             modules={[Pagination, Navigation, Mousewheel]}
           >
             <SwiperSlide key="1">
+              <div className="infoProjects">
+                <span className="index">2022</span>
+                <strong>Dashgo - Next | Chakra-ui</strong>
+              </div>
               <img
                 src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                 alt=""
               />
             </SwiperSlide>
             <SwiperSlide key="2">
+              <div className="infoProjects">
+                <span className="index">2022</span>
+                <strong>Dashgo - Next | Chakra-ui</strong>
+              </div>
+
               <img
                 src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                 alt=""
               />
             </SwiperSlide>
             <SwiperSlide key="3">
+              <div className="infoProjects">
+                <span className="index">2022</span>
+                <strong>Dashgo - Next | Chakra-ui</strong>
+              </div>
               <img
                 src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                 alt=""
               />
             </SwiperSlide>
             <SwiperSlide key="4">
+              <div className="infoProjects">
+                <span className="index">2022</span>
+                <strong>Dashgo - Next | Chakra-ui</strong>
+              </div>
               <img
                 src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                 alt=""
