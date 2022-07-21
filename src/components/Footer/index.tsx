@@ -5,6 +5,8 @@ import {
   LinkedinLogo,
   WhatsappLogo
 } from 'phosphor-react'
+import { motion } from 'framer-motion'
+import { fadeIn } from '../../motion/variants'
 import { ButtonRedirect } from '../Buttons/ButtonRedirect'
 
 import { ContainerFooter } from './styles'
@@ -12,7 +14,13 @@ import { ContainerFooter } from './styles'
 export function Footer() {
   return (
     <ContainerFooter>
-      <div className="contacts">
+      <motion.div
+        className="contacts"
+        variants={fadeIn('up')}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0 }}
+      >
         <strong>Contato</strong>
         <p>
           Sinta-se à vontade para entrar em contato comigo a qualquer momento.
@@ -27,9 +35,15 @@ export function Footer() {
             />
           </li>
         </ul>
-      </div>
+      </motion.div>
 
-      <div className="socialNetworks">
+      <motion.div
+        className="socialNetworks"
+        variants={fadeIn('up')}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0 }}
+      >
         <strong>Siga-me</strong>
         <ul>
           <li>
@@ -60,7 +74,7 @@ export function Footer() {
             </a>
           </li>
         </ul>
-      </div>
+      </motion.div>
     </ContainerFooter>
   )
 }

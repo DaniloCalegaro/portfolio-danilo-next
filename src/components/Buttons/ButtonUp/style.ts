@@ -1,19 +1,19 @@
 import styled from 'styled-components'
 
-export const ContainerBtnUp = styled.div`
-  background: var(--gray-500);
-  opacity: 0.6;
-  padding: 1rem;
-  line-height: 0;
-  clip-path: circle(40%);
-  transition: opacity, transform 0.2s;
+export const ContainerBtnUp = styled.a`
+  i {
+    background: var(--gray-500);
+    padding: 1rem;
+    line-height: 0;
+    clip-path: circle(40%);
+    opacity: 0.6;
 
-  > svg {
-    color: var(--white);
-  }
+    display: flex;
 
-  &:hover {
-    opacity: 1;
-    transform: scale(1.1);
+    //transition: opacity 0.2s, transform 0.2s;
+
+    > svg {
+      color: var(--white);
+    }
   }
 `

@@ -13,6 +13,7 @@ export function Header() {
         variants={fadeIn('down')}
         initial="offscreen"
         whileInView="onscreen"
+        viewport={{ once: true, amount: 0 }}
       >
         <Logo />
         <ul className="menu">

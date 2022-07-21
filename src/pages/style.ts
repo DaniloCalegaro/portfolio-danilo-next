@@ -13,13 +13,13 @@ export const Container = styled.div`
       right: calc(100vw / 2);
       z-index: 10;
     }
-    .btnContactMe {
+    /* .btnContactMe {
       margin: 0 1rem;
       position: fixed;
       bottom: 1rem;
       left: 0;
       z-index: 10;
-    }
+    } */
     .btnUp {
       margin: 0 1rem;
       position: fixed;

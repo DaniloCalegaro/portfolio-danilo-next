@@ -36,27 +36,13 @@ export default function Home() {
       <NeedDeveloper />
 
       <section className="buttonsControl">
-        {/* <div className="btnContactMe">
-          <ButtonRedirect />
-        </div> */}
-
-        <motion.div
-          className="btnScrool"
-          initial={'startscreen'}
-          animate={positionPage < 24 ? 'startscreen' : 'movescreen'}
-          variants={disappear}
-        >
+        <div className="btnScrool">
           <ButtonScroll />
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="btnUp"
-          initial={'startscreen'}
-          animate={positionPage < 24 ? 'startscreen' : 'movescreen'}
-          variants={riseup}
-        >
+        <div className="btnUp">
           <ButtonUp />
-        </motion.div>
+        </div>
       </section>
     </Container>
   )

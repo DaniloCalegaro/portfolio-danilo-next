@@ -11,7 +11,7 @@ export const fadeIn = (direction: 'up' | 'down' = 'up'): Variants => {
       opacity: 1,
       transition: {
         staggerChildren: 0.5,
-        duration: 0.7,
+        duration: 0.5,
         ease: 'easeInOut'
       }
     }
@@ -38,7 +38,7 @@ export const riseup: Variants = {
     y: 100
   },
   movescreen: {
-    opacity: 1,
+    opacity: 0.6,
     y: 0,
     transition: {
       staggerChildren: 0.5,

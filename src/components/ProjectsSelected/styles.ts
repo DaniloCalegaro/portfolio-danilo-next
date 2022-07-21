@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
 export const ContainerProjectsSelected = styled.section`
-  > span {
-    display: block;
-  }
+  > div {
+    > span {
+      display: block;
+    }
 
-  .buttonMoreProjects {
-    float: right;
+    .buttonMoreProjects {
+      float: right;
+    }
   }
 `
 
