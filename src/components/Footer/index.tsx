@@ -53,7 +53,7 @@ export function Footer() {
             <a
               href="https://www.linkedin.com/in/danilo-calegaro/"
               target="_blank"
-              rel="external"
+              rel="noreferrer"
             >
               Linkedin
             </a>
@@ -65,7 +65,7 @@ export function Footer() {
             <a
               href="https://github.com/DaniloCalegaro"
               target="_blank"
-              rel="external"
+              rel="noreferrer"
             >
               Github
             </a>
@@ -77,7 +77,7 @@ export function Footer() {
             <a
               href="https://www.instagram.com/DaniloCalegaro/"
               target="_blank"
-              rel="external"
+              rel="noreferrer"
             >
               Instagram
             </a>
