@@ -9,7 +9,7 @@ import { Initial } from '../components/Initial'
 import { NeedDeveloper } from '../components/NeedDeveloper'
 import { ProjectsSelected } from '../components/ProjectsSelected'
 import { disappear, riseup } from '../motion/variants'
-import { Container } from './style'
+import { Container } from './styles'
 
 export default function Home() {
   const { scrollYProgress, scrollY } = useScroll()
