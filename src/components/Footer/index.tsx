@@ -31,7 +31,7 @@ export function Footer() {
             <ButtonRedirect
               icon={<Envelope size={20} />}
               name="Entre em contato"
-              url="/contact"
+              href="/contact"
             />
           </li>
         </ul>

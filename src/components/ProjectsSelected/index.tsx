@@ -1,3 +1,6 @@
+import { format, parseISO } from 'date-fns'
+import ptBr from 'date-fns/locale/pt'
+
 import { motion } from 'framer-motion'
 import { fadeIn } from '../../motion/variants'
 
@@ -16,21 +19,50 @@ import { apiGithub } from '../../services/apiGithub'
 interface ApiGithubRepos {
   id: string
   name: string
+  created_at: string
+  html_url: string
 }
 
 export function ProjectsSelected() {
-  const [repositories, setRepositories] = useState<ApiGithubRepos>()
+  const [repositories, setRepositories] = useState<ApiGithubRepos[]>([])
 
   useEffect(() => {
     async function projectsGitHub() {
-      const response = await apiGithub.get<ApiGithubRepos>(
+      const response = await apiGithub.get<ApiGithubRepos[]>(
         '/users/DaniloCalegaro/repos'
       )
-      setRepositories(response.data)
+      const data = response.data.map(project => ({
+        id: project.id,
+        name: project.name,
+        created_at: project.created_at,
+        html_url: project.html_url
+      }))
+
+      const lastProjects = data
+        .sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
+        .filter((project, index) => index < 6)
+
+      const projectsInfosFormatted = lastProjects.map(project => ({
+        ...project,
+        created_at: formattedDate(project.created_at),
+        name: capitalize(splitString(project.name, '-')[0]),
+        imageDesktop: project.html_url + '/tree/main/screenshot'
+      }))
+
+      setRepositories(projectsInfosFormatted)
+      console.log(projectsInfosFormatted)
     }
 
     projectsGitHub()
   }, [])
+
+  const formattedDate = (date: string) =>
+    format(parseISO(date), "MMMM ' de ' yyyy", { locale: ptBr })
+
+  const splitString = (stringToSplit: string, separator: string) =>
+    stringToSplit.split(separator)
+
+  const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1)
 
   return (
     <ContainerProjectsSelected id="projects">
@@ -71,16 +103,18 @@ export function ProjectsSelected() {
             mousewheel={true}
             modules={[Pagination, Navigation, Mousewheel]}
           >
-            <SwiperSlide key="1">
-              <div className="infoProjects">
-                <span className="index">2022</span>
-                <strong>Dashgo - Next | Chakra-ui</strong>
-              </div>
-              <img
-                src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                alt=""
-              />
-            </SwiperSlide>
+            {repositories.map(repositorie => (
+              <SwiperSlide key={repositorie.id}>
+                <div className="infoProjects">
+                  <span className="index">{repositorie.created_at}</span>
+                  <strong>{repositorie.name}</strong>
+                </div>
+                <img
+                  src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                  alt=""
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </SwiperBox>
 
@@ -88,7 +122,8 @@ export function ProjectsSelected() {
           <ButtonRedirect
             icon={<GithubLogo size={20} />}
             name="Ver todos"
-            url="#"
+            href="https://github.com/DaniloCalegaro?tab=repositories"
+            target="_blank"
           />
         </div>
       </motion.div>

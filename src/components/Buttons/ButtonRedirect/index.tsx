@@ -1,16 +1,16 @@
-import { ElementType, ReactNode } from 'react'
+import { ElementType, HTMLAttributeAnchorTarget, ReactNode } from 'react'
 import { ContainerBtnContactMe } from './style'
 
-interface ButtonRedirectProps {
+interface ButtonRedirectProps
+  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   name?: string
   icon?: React.ReactNode
-  url?: string
 }
 
-export function ButtonRedirect({ name, icon, url }: ButtonRedirectProps) {
+export function ButtonRedirect({ name, icon, ...rest }: ButtonRedirectProps) {
   return (
     <ContainerBtnContactMe>
-      <a href={url}>
+      <a {...rest}>
         {icon}
         {name}
       </a>
