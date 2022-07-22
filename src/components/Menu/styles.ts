@@ -11,7 +11,7 @@ export const ContainerMenuSideBar = styled.div`
     }
 
     svg {
-      color: var(--white);
+      color: var(--black);
       transition: color 0.2s;
     }
 
