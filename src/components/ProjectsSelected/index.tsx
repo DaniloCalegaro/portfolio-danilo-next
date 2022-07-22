@@ -26,6 +26,7 @@ interface ApiGithubRepos {
   htmlUrl: string
   urlImagePortfolio: string
   tags: string
+  previewUrl: string
 }
 
 export function ProjectsSelected() {
@@ -38,7 +39,8 @@ export function ProjectsSelected() {
       created_at: project.created_at,
       htmlUrl: project.html_url,
       urlImagePortfolio: project.url_image_portfolio,
-      tags: project.tags
+      tags: project.tags,
+      previewUrl: project.preview_url
     }))
     setRepositories(data)
     //console.log(data)
@@ -93,15 +95,28 @@ export function ProjectsSelected() {
           >
             {repositories.map(repository => (
               <SwiperSlide key={repository.id}>
-                <div className="infoProjects">
-                  <span className="index">{repository.created_at}</span>
-                  <a
-                    className="linkRepository"
-                    href={repository.htmlUrl}
-                    target="_blank"
-                  >
-                    {repository.name}
-                  </a>
+                <div className="detailsProjects">
+                  <div className="info">
+                    <span className="index">{repository.created_at}</span>
+                    <a
+                      className="linkRepository"
+                      href={repository.htmlUrl}
+                      target="_blank"
+                    >
+                      {repository.name}
+                    </a>
+                    <span className="tags">{repository.tags}</span>
+                  </div>
+
+                  {repository.previewUrl && (
+                    <a
+                      className="preview"
+                      href={repository.previewUrl}
+                      target="_blank"
+                    >
+                      Preview
+                    </a>
+                  )}
                 </div>
                 <Image
                   src={repository.urlImagePortfolio}
@@ -109,7 +124,6 @@ export function ProjectsSelected() {
                   width="1000"
                   height="500"
                 />
-                <span className="tags">{repository.tags}</span>
               </SwiperSlide>
             ))}
           </Swiper>

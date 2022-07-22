@@ -6,23 +6,62 @@
       "created_at": "julho de 2022",
       "html_url": "https://github.com/DaniloCalegaro/dashgo-next-chakra-ui",
       "url_image_portfolio": "/imgProjects/dashgo-next-chakra-ui.jpg",
-      "tags": "Next | Chakra UI | TypeScript"
+      "tags": "Next | Chakra UI | TypeScript",
+      "preview_url": "https://dashgo-next-chakra-ui.vercel.app/"
     },
     {
       "id": 2,
-      "name": "Dashgo",
+      "name": "Restaurant",
       "created_at": "julho de 2022",
-      "html_url": "https://github.com/DaniloCalegaro/dashgo-next-chakra-ui",
-      "url_image_portfolio": "/imgProjects/dashgo-next-chakra-ui.jpg",
-      "tags": "Next | Chakra UI | TypeScript"
+      "html_url": "https://github.com/DaniloCalegaro/restaurant-refactoring-react-ts",
+      "url_image_portfolio": "/imgProjects/restaurant-refactoring-react-ts.jpg",
+      "tags": "React | TypeScript | Styled-components | Json-server",
+      "preview_url": ""
     },
     {
       "id": 3,
-      "name": "Dashgo",
+      "name": "Carrinho de Compras",
       "created_at": "julho de 2022",
-      "html_url": "https://github.com/DaniloCalegaro/dashgo-next-chakra-ui",
-      "url_image_portfolio": "/imgProjects/dashgo-next-chakra-ui.jpg",
-      "tags": "Next | Chakra UI | TypeScript"
+      "html_url": "https://github.com/DaniloCalegaro/carrinho-de-compras-reactjs",
+      "url_image_portfolio": "/imgProjects/carrinho-de-compras-reactjs.jpg",
+      "tags": "Reactjs | Hooks | Typescript | Styled-components",
+      "preview_url": ""
+    },
+    {
+      "id": 4,
+      "name": "DtMoney",
+      "created_at": "julho de 2022",
+      "html_url": "https://github.com/DaniloCalegaro/dtmoney-react-ts",
+      "url_image_portfolio": "/imgProjects/dtmoney-react-ts.jpg",
+      "tags": "Reactjs | Typescript | Styled-components",
+      "preview_url": ""
+    },
+    {
+      "id": 5,
+      "name": "ToDo",
+      "created_at": "julho de 2022",
+      "html_url": "https://github.com/DaniloCalegaro/to-do-react-ts",
+      "url_image_portfolio": "/imgProjects/to-do-react-ts.jpg",
+      "tags": "Reactjs | Typescript | SASS | Phosphor icons",
+      "preview_url": "https://to-do-react-ts.vercel.app/"
+    },
+    {
+      "id": 6,
+      "name": "JobList",
+      "created_at": "julho de 2022",
+      "html_url": "https://github.com/DaniloCalegaro/job-listings",
+      "url_image_portfolio": "/imgProjects/job-listings.jpg",
+      "tags": "Javascript | Html | Scss",
+      "preview_url": "https://job-listings-flame.vercel.app/"
+    },
+    {
+      "id": 7,
+      "name": "Animated Countdown",
+      "created_at": "julho de 2022",
+      "html_url": "https://github.com/DaniloCalegaro/animated-countdown",
+      "url_image_portfolio": "/imgProjects/animated-countdown.jpg",
+      "tags": "Javascript | Html | Scss",
+      "preview_url": "https://animated-countdown.vercel.app/"
     }
   ]
 }

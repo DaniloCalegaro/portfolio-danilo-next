@@ -23,36 +23,55 @@ export const SwiperBox = styled.div`
   .swiper-slide {
     background: var(--black);
 
-    position: relative;
+    .detailsProjects {
+      margin: 1rem 1.5rem;
 
-    .infoProjects {
-      margin: 1.5rem;
+      display: flex;
+      justify-content: space-between;
 
-      .index {
-        font-size: 0.8rem;
+      .info {
+        .index {
+          font-size: 0.8rem;
+        }
+
+        .linkRepository {
+          color: var(--white);
+          display: block;
+          font-size: 1rem;
+          font-weight: 500;
+
+          transition: color 0.2s;
+
+          &:hover {
+            color: var(--magenta);
+          }
+        }
       }
+      .preview {
+        background: var(--gray-500);
+        height: 1.5rem;
+        border-radius: 1rem;
+        padding: 0.5rem;
 
-      .linkRepository {
+        font-size: 0.8rem;
+
+        display: flex;
+        align-items: center;
+
         color: var(--white);
-        display: block;
-        font-size: 1rem;
-        font-weight: 500;
 
-        transition: color 0.2s;
+        transition: background-color 0.2s;
 
         &:hover {
-          color: var(--magenta);
+          background-color: var(--magenta);
         }
       }
     }
 
     .tags {
       color: var(--gray-500);
-      font-size: 0.8rem;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      margin: 0.5rem 1.5rem;
+      font-size: 0.7rem;
+      //position: absolute;
     }
   }
 
