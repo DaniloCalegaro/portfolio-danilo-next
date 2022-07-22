@@ -48,7 +48,7 @@ export const SwiperBox = styled.div`
         }
       }
       .preview {
-        background: var(--gray-500);
+        background: var(--gray-800);
         height: 1.5rem;
         border-radius: 1rem;
         padding: 0.5rem;
