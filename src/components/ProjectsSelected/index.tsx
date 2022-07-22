@@ -33,17 +33,19 @@ export function ProjectsSelected() {
   const [repositories, setRepositories] = useState<ApiGithubRepos[]>([])
 
   useEffect(() => {
-    const data = repositoriesJson.repos.map(project => ({
-      id: project.id,
-      name: project.name,
-      created_at: project.created_at,
-      htmlUrl: project.html_url,
-      urlImagePortfolio: project.url_image_portfolio,
-      tags: project.tags,
-      previewUrl: project.preview_url
-    }))
-    setRepositories(data)
-    //console.log(data)
+    async function chargeRepositories() {
+      const data = repositoriesJson.repos.map(project => ({
+        id: project.id,
+        name: project.name,
+        created_at: project.created_at,
+        htmlUrl: project.html_url,
+        urlImagePortfolio: project.url_image_portfolio,
+        tags: project.tags,
+        previewUrl: project.preview_url
+      }))
+      setRepositories(data)
+    }
+    chargeRepositories()
   }, [])
 
   const formattedDate = (date: string) =>
@@ -124,7 +126,7 @@ export function ProjectsSelected() {
                   src={repository.urlImagePortfolio}
                   alt={`foto de ${repository.name}`}
                   width="1000"
-                  height="500"
+                  height="488"
                 />
               </SwiperSlide>
             ))}
