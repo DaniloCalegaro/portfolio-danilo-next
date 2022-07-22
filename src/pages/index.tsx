@@ -6,7 +6,7 @@ import { ButtonUp } from '../components/Buttons/ButtonUp'
 import { Initial } from '../components/Initial'
 import { NeedDeveloper } from '../components/NeedDeveloper'
 import { ProjectsSelected } from '../components/ProjectsSelected'
-import { Container } from './styles'
+import { Container } from '../styles/styles'
 
 export default function Home() {
   const { scrollYProgress, scrollY } = useScroll()
