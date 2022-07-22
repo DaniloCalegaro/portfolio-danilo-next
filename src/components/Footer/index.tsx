@@ -53,6 +53,7 @@ export function Footer() {
             <a
               href="https://www.linkedin.com/in/danilo-calegaro/"
               target="_blank"
+              rel="external"
             >
               Linkedin
             </a>
@@ -61,7 +62,11 @@ export function Footer() {
             <i>
               <GithubLogo />
             </i>
-            <a href="https://github.com/DaniloCalegaro" target="_blank">
+            <a
+              href="https://github.com/DaniloCalegaro"
+              target="_blank"
+              rel="external"
+            >
               Github
             </a>
           </li>
@@ -69,7 +74,11 @@ export function Footer() {
             <i>
               <InstagramLogo />
             </i>
-            <a href="https://www.instagram.com/DaniloCalegaro/" target="_blank">
+            <a
+              href="https://www.instagram.com/DaniloCalegaro/"
+              target="_blank"
+              rel="external"
+            >
               Instagram
             </a>
           </li>

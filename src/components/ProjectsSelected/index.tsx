@@ -102,6 +102,7 @@ export function ProjectsSelected() {
                       className="linkRepository"
                       href={repository.htmlUrl}
                       target="_blank"
+                      rel="external"
                     >
                       {repository.name}
                     </a>
@@ -113,6 +114,7 @@ export function ProjectsSelected() {
                       className="preview"
                       href={repository.previewUrl}
                       target="_blank"
+                      rel="external"
                     >
                       Preview
                     </a>
