@@ -8,6 +8,7 @@ export const ContainerProjectsSelected = styled.section`
 
     .buttonMoreProjects {
       float: right;
+      margin-top: 1rem;
     }
   }
 `
@@ -16,57 +17,52 @@ export const SwiperBox = styled.div`
   .swiper {
     margin-top: 2rem;
     width: 100%;
-    height: 30rem;
+    height: 18rem;
   }
 
   .swiper-slide {
-    background: linear-gradient(
-      180deg,
-      var(--black) 20%,
-      rgba(255, 255, 255, 0) 60%
-    );
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    background: var(--black);
 
     position: relative;
 
     .infoProjects {
-      position: absolute;
-      left: 0;
-      padding: 1rem;
+      margin: 1.5rem;
 
-      span {
+      .index {
         font-size: 0.8rem;
       }
-      strong {
+
+      .linkRepository {
         color: var(--white);
         display: block;
         font-size: 1rem;
         font-weight: 500;
+
+        transition: color 0.2s;
+
+        &:hover {
+          color: var(--magenta);
+        }
       }
     }
 
-    img {
-      display: block;
-      width: 100%;
-      height: 90%;
-      object-fit: cover;
-
-      z-index: -2;
+    .tags {
+      color: var(--gray-500);
+      font-size: 0.8rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 0.5rem 1.5rem;
     }
-
-    //position: relative;
   }
 
-  .swiper-slide .swiper-pagination-bullet-active {
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background: var(--magenta);
   }
 
   .swiper-button-next,
   .swiper-button-prev {
-    color: var(--black);
+    color: var(--gray-500);
   }
 
   .swiper-button-next:hover,
