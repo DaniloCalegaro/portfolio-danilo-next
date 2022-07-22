@@ -3,7 +3,6 @@ import { fadeIn } from '../../motion/variants'
 
 import { Logo } from '../Logo'
 import { ContainerHeader } from './styles'
-import { List } from 'phosphor-react'
 import { Menu } from '../Menu'
 
 export function Header() {

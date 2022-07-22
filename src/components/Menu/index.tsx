@@ -1,10 +1,6 @@
 import { AnimatePresence, useCycle, motion } from 'framer-motion'
 import { List, X } from 'phosphor-react'
-import {
-  disappear,
-  moveMenu,
-  moveMenuItemVariants
-} from '../../motion/variants'
+import { moveMenu, moveMenuItemVariants } from '../../motion/variants'
 import { Logo } from '../Logo'
 import { ContainerMenuSideBar } from './styles'
 
