@@ -92,7 +92,7 @@ export function ProjectsSelected() {
             }}
             navigation={true}
             mousewheel={true}
-            //preloadImages={true}
+            preloadImages={true}
             lazy={{
               loadPrevNext: true,
               loadPrevNextAmount: 2
