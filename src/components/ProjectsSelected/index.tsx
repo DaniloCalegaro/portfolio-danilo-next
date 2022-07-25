@@ -85,7 +85,6 @@ export function ProjectsSelected() {
               }
             }}
             spaceBetween={30}
-            //slidesPerGroup={2}
             loop={false}
             loopFillGroupWithBlank={false}
             pagination={{
@@ -93,6 +92,7 @@ export function ProjectsSelected() {
             }}
             navigation={true}
             mousewheel={true}
+            //preloadImages={true}
             modules={[Pagination, Navigation, Mousewheel]}
           >
             {repositories.map(repository => (
@@ -125,8 +125,8 @@ export function ProjectsSelected() {
                 <Image
                   src={repository.urlImagePortfolio}
                   alt={`foto de ${repository.name}`}
-                  width="1000"
-                  height="488"
+                  width="720"
+                  height="352"
                 />
               </SwiperSlide>
             ))}

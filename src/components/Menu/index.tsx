@@ -8,6 +8,7 @@ export function Menu() {
   const [open, cycleOpen] = useCycle(false, true)
 
   function handleOpenMenu() {
+    document.body.style.overflowY = open ? 'scroll' : 'hidden'
     cycleOpen()
   }
 

@@ -15,8 +15,13 @@ export const ContainerAboutMe = styled.section`
       margin-bottom: 1.5rem;
     }
 
+    span {
+      color: var(--gray-800);
+    }
+
     span:last-child {
       width: 80%;
+      text-align: center;
     }
   }
 

@@ -18,6 +18,25 @@ export default createGlobalStyle`
     --magenta: #ff3366;
   }
 
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--gray-100); 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--gray-500); 
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-800); 
+  }
+
   html {
     scroll-behavior: smooth;
     
