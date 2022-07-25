@@ -41,9 +41,13 @@ export function Initial() {
         <img src="/images/bg_home.png" alt="foto Danilo" />
       </motion.div>
 
-      <div className="backgroundDev">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="backgroundDev"
+      >
         <strong>developer</strong>
-      </div>
+      </motion.div>
     </ContainerInitial>
   )
 }
