@@ -93,10 +93,10 @@ export function ProjectsSelected() {
             navigation={true}
             mousewheel={true}
             preloadImages={true}
-            lazy={{
-              loadPrevNext: true,
-              loadPrevNextAmount: 2
-            }}
+            // lazy={{
+            //   loadPrevNext: true,
+            //   loadPrevNextAmount: 2
+            // }}
             modules={[Pagination, Navigation, Mousewheel]}
           >
             {repositories.map(repository => (
