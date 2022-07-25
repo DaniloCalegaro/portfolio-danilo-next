@@ -18,7 +18,7 @@ export function NeedDeveloper() {
           Precisa de um desenvolvedor?
         </motion.span>
         <motion.strong className="title" variants={fadeIn('up')}>
-          Vamos trabalhar juntos? <ArrowRight size={50} />
+          Vamos trabalhar juntos <ArrowRight size={50} />
         </motion.strong>
       </motion.div>
     </ContainerNeedDeveloper>
