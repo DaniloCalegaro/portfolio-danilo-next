@@ -131,6 +131,7 @@ export function ProjectsSelected() {
                   alt={`foto de ${repository.name}`}
                   width="720"
                   height="352"
+                  priority={true}
                 />
               </SwiperSlide>
             ))}
