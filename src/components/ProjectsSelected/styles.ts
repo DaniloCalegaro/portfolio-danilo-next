@@ -75,8 +75,13 @@ export const SwiperBox = styled.div`
     }
   }
 
-  .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: var(--magenta);
+  .swiper-pagination-bullet {
+    background: var(--gray-500);
+    opacity: 1;
+
+    &.swiper-pagination-bullet-active {
+      background: var(--magenta);
+    }
   }
 
   .swiper-button-next,
