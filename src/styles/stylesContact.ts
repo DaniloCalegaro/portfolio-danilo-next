@@ -31,7 +31,14 @@ export const ContainerContact = styled.div`
   }
 
   form {
-    border: solid 1px;
+    padding: 1.5rem;
+
+    .fields {
+      margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+    }
   }
 
   @media (min-width: 720px) {
@@ -42,6 +49,11 @@ export const ContainerContact = styled.div`
     .location {
       iframe {
         width: 100%;
+      }
+    }
+    form {
+      .fields {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   }

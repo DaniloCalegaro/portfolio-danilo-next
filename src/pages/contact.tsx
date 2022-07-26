@@ -1,3 +1,7 @@
+import { ArrowRight } from 'phosphor-react'
+import { ButtonSubmit } from '../components/Buttons/ButtonSubmit'
+import { Input } from '../components/Input'
+import { Select } from '../components/Select'
 import { ContainerContact } from '../styles/stylesContact'
 
 export default function Contact() {
@@ -17,7 +21,46 @@ export default function Contact() {
           ></iframe>
         </div>
         <form>
-          <label>Form Contato</label>
+          <div className="fields">
+            <Input
+              labelValue="Seu nome"
+              type="text"
+              id="name"
+              placeholder="Qual seu nome?"
+            />
+            <Input
+              labelValue="Seu e-mail"
+              type="email"
+              id="email"
+              placeholder="Qual é seu e-mail?"
+            />
+            <Select name="service" labelValue="Serviço">
+              <option value="" disabled selected>
+                Em quê você está interessado?
+              </option>
+              <option value="unique_project">
+                Preciso de ajuda com projeto único
+              </option>
+              <option value="long_term_partnership">
+                Procurando uma parceria de longo prazo
+              </option>
+              <option value="developer_full-time">
+                Quer contratar um desenvolvedor em tempo integral
+              </option>
+              <option value="say_hi">Só queria dizer oi!</option>
+            </Select>
+            <Input
+              labelValue="Mensagem"
+              type="text"
+              id="message"
+              placeholder="Qual é a sua mensagem?"
+            />
+          </div>
+
+          <ButtonSubmit
+            name="Enviar mensagem"
+            icon={<ArrowRight size={20} />}
+          />
         </form>
       </div>
     </ContainerContact>
