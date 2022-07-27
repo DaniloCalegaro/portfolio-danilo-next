@@ -6,17 +6,17 @@ export const ContainerNeedDeveloper = styled.section`
     flex-direction: column;
     align-items: center;
 
-    strong {
-      cursor: pointer;
+    a {
       display: inline-block;
       font-size: 3.2rem;
+      font-weight: 800;
       transition: transform 0.2s;
       //color: transparent;
       //-webkit-text-stroke: 1px var(--black);
       transition: color 0.2s;
     }
 
-    strong:hover {
+    a:hover {
       //transform: scale(1.05);
       color: var(--gray-500);
     }
@@ -29,7 +29,7 @@ export const ContainerNeedDeveloper = styled.section`
 
   @media (min-width: 1280px) {
     div {
-      strong::after {
+      a::after {
         content: '';
         width: 0px;
         height: 3px;
@@ -41,12 +41,12 @@ export const ContainerNeedDeveloper = styled.section`
         transition: width 0.2s, opacity 0.4s;
       }
 
-      strong:hover::after {
+      a:hover::after {
         width: 100%;
         opacity: 1;
       }
 
-      strong:hover {
+      a:hover {
         color: var(--black);
       }
     }

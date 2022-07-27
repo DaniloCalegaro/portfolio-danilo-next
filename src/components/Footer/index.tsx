@@ -31,7 +31,9 @@ export function Footer() {
             <ButtonRedirect
               icon={<Envelope size={20} />}
               name="Entre em contato"
-              href="#"
+              href="https://www.linkedin.com/in/danilo-calegaro/"
+              target="_blank"
+              rel="noreferrer"
             />
           </li>
         </ul>
