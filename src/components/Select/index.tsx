@@ -1,17 +1,22 @@
-import { ReactNode } from 'react'
+import { FC, forwardRef, ReactNode } from 'react'
 import { ContainerSelect } from './styles'
 
-interface SelectPros extends React.SelectHTMLAttributes<HTMLSelectElement> {
-  labelValue?: string
-  name: string
+interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+  label?: string
+  id: string
   children: ReactNode
 }
 
-export function Select({ labelValue, name, children, ...rest }: SelectPros) {
+export const Select: FC<SelectProps> = forwardRef<
+  HTMLSelectElement,
+  SelectProps
+>(({ id, name, label, placeholder, children, ...props }, ref) => {
   return (
     <ContainerSelect>
-      <label>{labelValue}</label>
-      <select {...rest}>{children}</select>
+      {label && <label>{label}</label>}
+      <select id={id} ref={ref} name={name} {...props}>
+        {children}
+      </select>
     </ContainerSelect>
   )
-}
+})

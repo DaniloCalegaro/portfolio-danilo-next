@@ -1,10 +1,31 @@
 import { ArrowRight } from 'phosphor-react'
+import { SubmitHandler, useForm } from 'react-hook-form'
 import { ButtonSubmit } from '../components/Buttons/ButtonSubmit'
 import { Input } from '../components/Input'
 import { Select } from '../components/Select'
 import { ContainerContact } from '../styles/stylesContact'
 
+type CreatMessageContact = {
+  name: string
+  email: string
+  service: string
+  message: string
+}
+
 export default function Contact() {
+  const {
+    register,
+    handleSubmit,
+    formState,
+    formState: { errors }
+  } = useForm<CreatMessageContact>()
+
+  const handleCreateNewMessageContact: SubmitHandler<
+    CreatMessageContact
+  > = values => {
+    console.log(values)
+  }
+
   return (
     <ContainerContact>
       <span className="index">Vamos trabalhar juntos</span>
@@ -20,22 +41,24 @@ export default function Contact() {
             loading="lazy"
           ></iframe>
         </div>
-        <form>
+        <form onSubmit={handleSubmit(handleCreateNewMessageContact)}>
           <div className="fields">
             <Input
-              labelValue="Seu nome"
+              label="Seu nome"
               type="text"
               id="name"
               placeholder="Qual seu nome?"
+              {...register('name')}
             />
             <Input
-              labelValue="Seu e-mail"
+              label="Seu e-mail"
               type="email"
               id="email"
               placeholder="Qual é seu e-mail?"
+              {...register('email')}
             />
-            <Select name="service" labelValue="Serviço">
-              <option value="" disabled selected>
+            <Select id="service" label="Serviço" {...register('service')}>
+              <option defaultValue="" disabled>
                 Em quê você está interessado?
               </option>
               <option value="unique_project">
@@ -50,14 +73,16 @@ export default function Contact() {
               <option value="say_hi">Só queria dizer oi!</option>
             </Select>
             <Input
-              labelValue="Mensagem"
+              label="Mensagem"
               type="text"
               id="message"
               placeholder="Qual é a sua mensagem?"
+              {...register('message')}
             />
           </div>
 
           <ButtonSubmit
+            type="submit"
             name="Enviar mensagem"
             icon={<ArrowRight size={20} />}
           />

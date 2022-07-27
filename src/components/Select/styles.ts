@@ -4,7 +4,7 @@ export const ContainerSelect = styled.div`
   label {
     display: block;
     color: var(--gray-500);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
   }
 
   select {

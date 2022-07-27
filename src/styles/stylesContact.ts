@@ -38,6 +38,10 @@ export const ContainerContact = styled.div`
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       gap: 2rem;
+
+      select {
+        font-weight: 500;
+      }
     }
   }
 
