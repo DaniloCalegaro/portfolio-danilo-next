@@ -1,3 +1,5 @@
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 import { ArrowRight } from 'phosphor-react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { ButtonSubmit } from '../components/Buttons/ButtonSubmit'
@@ -12,13 +14,22 @@ type CreatMessageContact = {
   message: string
 }
 
+const createNewMessageSchema = yup.object().shape({
+  name: yup.string().required('Nome obrigatório'),
+  email: yup.string().required('E-mail obrigatório').email('E-mail inválido'),
+  service: yup.string().required('Selecione o serviço'),
+  message: yup.string().required('Mensagem obrigatória')
+})
+
 export default function Contact() {
   const {
     register,
     handleSubmit,
     formState,
     formState: { errors }
-  } = useForm<CreatMessageContact>()
+  } = useForm<CreatMessageContact>({
+    resolver: yupResolver(createNewMessageSchema)
+  })
 
   const handleCreateNewMessageContact: SubmitHandler<
     CreatMessageContact
@@ -49,6 +60,7 @@ export default function Contact() {
               id="name"
               placeholder="Qual seu nome?"
               {...register('name')}
+              error={errors.name}
             />
             <Input
               label="Seu e-mail"
@@ -56,9 +68,16 @@ export default function Contact() {
               id="email"
               placeholder="Qual é seu e-mail?"
               {...register('email')}
+              error={errors.email}
             />
-            <Select id="service" label="Serviço" {...register('service')}>
-              <option defaultValue="" disabled>
+            <Select
+              id="service"
+              label="Serviço"
+              defaultValue={''}
+              {...register('service')}
+              error={errors.service}
+            >
+              <option value="" disabled>
                 Em quê você está interessado?
               </option>
               <option value="unique_project">
@@ -78,6 +97,7 @@ export default function Contact() {
               id="message"
               placeholder="Qual é a sua mensagem?"
               {...register('message')}
+              error={errors.message}
             />
           </div>
 

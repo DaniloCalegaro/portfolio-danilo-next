@@ -16,6 +16,7 @@ export default createGlobalStyle`
     --gray-800: #434447;
     --black: #0f141e;
     --magenta: #ff3366;
+    --error: #EC3B14;
   }
 
   ::-webkit-scrollbar {

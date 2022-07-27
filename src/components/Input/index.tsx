@@ -1,4 +1,5 @@
 import React, { FC, forwardRef } from 'react'
+import { FieldError } from 'react-hook-form'
 import { ContainerInput } from './styles'
 
 export type InputType = 'text' | 'email' | 'password'
@@ -9,10 +10,11 @@ export type InputProps = {
   label?: string
   type?: InputType
   placeholder?: string
+  error?: FieldError
 }
 
 export const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
-  ({ id, name, label, type = 'text', placeholder, ...props }, ref) => {
+  ({ id, name, label, type = 'text', placeholder, error, ...props }, ref) => {
     return (
       <ContainerInput>
         {label && <label htmlFor={id}>{label}</label>}
@@ -24,6 +26,7 @@ export const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
           placeholder={placeholder}
           {...props}
         />
+        {error && <span>{error.message}</span>}
       </ContainerInput>
     )
   }

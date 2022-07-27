@@ -13,4 +13,8 @@ export const ContainerSelect = styled.div`
     font-size: 1rem;
     width: 100%;
   }
+
+  span {
+    color: var(--error);
+  }
 `

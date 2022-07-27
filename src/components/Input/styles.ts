@@ -24,4 +24,8 @@ export const ContainerInput = styled.div`
       border-bottom: 1px solid var(--magenta);
     }
   }
+
+  span {
+    color: var(--error);
+  }
 `
