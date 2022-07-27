@@ -71,7 +71,7 @@ export function Menu() {
                   <a href="/#projects">Projetos</a>
                 </li>
                 <li>
-                  <a href="/#needDeveloper">Contato </a>
+                  <a href="/contact">Contato </a>
                 </li>
               </motion.ul>
               <motion.footer
