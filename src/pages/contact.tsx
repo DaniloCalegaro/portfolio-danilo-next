@@ -1,4 +1,5 @@
 import { yupResolver } from '@hookform/resolvers/yup'
+import emailjs from 'emailjs-com'
 import * as yup from 'yup'
 import { ArrowRight } from 'phosphor-react'
 import { SubmitHandler, useForm } from 'react-hook-form'
@@ -22,6 +23,10 @@ const createNewMessageSchema = yup.object().shape({
 })
 
 export default function Contact() {
+  const userID = process.env.REACT_APP_USER_ID
+  const templateID = process.env.REACT_APP_TEMPLATE_ID
+  const serviceID = process.env.REACT_APP_SERVICE_ID
+
   const {
     register,
     handleSubmit,
@@ -35,6 +40,15 @@ export default function Contact() {
     CreatMessageContact
   > = values => {
     console.log(values)
+
+    emailjs.sendForm(serviceID, templateID, '#contact-form', userID).then(
+      result => {
+        console.log('Sucess...', result.text)
+      },
+      error => {
+        console.log('Failed...', error.text)
+      }
+    )
   }
 
   return (
@@ -52,7 +66,10 @@ export default function Contact() {
             loading="lazy"
           ></iframe>
         </div>
-        <form onSubmit={handleSubmit(handleCreateNewMessageContact)}>
+        <form
+          onSubmit={handleSubmit(handleCreateNewMessageContact)}
+          id="contact-form"
+        >
           <div className="fields">
             <Input
               label="Seu nome"
