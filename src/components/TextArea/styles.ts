@@ -14,11 +14,14 @@ export const ContainerTextArea = styled.div`
     width: 100%;
     height: 2.8rem;
 
+    padding-top: 0.65rem;
+
     transition: border 0.2s;
 
     ::placeholder {
       color: var(--black);
       font-weight: 500;
+      //transform: translateY(0.57rem);
     }
 
     &:focus {
