@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 import { ArrowRight } from 'phosphor-react'
 import { fadeIn } from '../../motion/variants'
@@ -17,9 +18,11 @@ export function NeedDeveloper() {
         <motion.span className="index" variants={fadeIn('up')}>
           Precisa de um desenvolvedor?
         </motion.span>
-        <motion.a href="/contact" className="title" variants={fadeIn('up')}>
-          Vamos trabalhar juntos <ArrowRight size={50} />
-        </motion.a>
+        <Link href="/contact">
+          <motion.a href="/contact" className="title" variants={fadeIn('up')}>
+            Vamos trabalhar juntos <ArrowRight size={50} />
+          </motion.a>
+        </Link>
       </motion.div>
     </ContainerNeedDeveloper>
   )

@@ -13,7 +13,7 @@ export type InputProps = {
   error?: FieldError
 }
 
-export const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
+const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
   ({ id, name, label, type = 'text', placeholder, error, ...props }, ref) => {
     return (
       <ContainerInput>
@@ -31,3 +31,7 @@ export const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
     )
   }
 )
+
+Input.displayName = 'Input'
+
+export default Input

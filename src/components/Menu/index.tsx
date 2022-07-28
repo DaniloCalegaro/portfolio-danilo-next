@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { AnimatePresence, useCycle, motion } from 'framer-motion'
 import { List, X } from 'phosphor-react'
 import { moveMenu, moveMenuItemVariants } from '../../motion/variants'
@@ -62,16 +63,24 @@ export function Menu() {
                 variants={moveMenuItemVariants}
               >
                 <li>
-                  <a href="/#header">Início</a>
+                  <Link href="/#header">
+                    <a>Início</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/#aboutMe">Sobre Mim</a>
+                  <Link href="/#aboutMe">
+                    <a>Sobre Mim</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/#projects">Projetos</a>
+                  <Link href="/#projects">
+                    <a>Projetos</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/contact">Contato </a>
+                  <Link href="/contact">
+                    <a>Contato </a>
+                  </Link>
                 </li>
               </motion.ul>
               <motion.footer

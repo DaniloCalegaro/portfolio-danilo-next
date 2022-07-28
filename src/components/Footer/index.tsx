@@ -11,6 +11,7 @@ import { ButtonRedirect } from '../Buttons/ButtonRedirect'
 
 import { ContainerFooter } from './styles'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 export function Footer() {
   const { asPath } = useRouter()
@@ -38,11 +39,12 @@ export function Footer() {
         <ul>
           <li>
             {!isActive && (
-              <ButtonRedirect
-                icon={<Envelope size={20} />}
-                name="Entre em contato"
-                href="/contact"
-              />
+              <Link href="/contact">
+                <ButtonRedirect
+                  icon={<Envelope size={20} />}
+                  name="Entre em contato"
+                />
+              </Link>
             )}
           </li>
         </ul>
