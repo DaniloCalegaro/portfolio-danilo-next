@@ -4,7 +4,7 @@ import * as yup from 'yup'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { ButtonSubmit } from '../components/Buttons/ButtonSubmit'
 import Input from '../components/Input'
-import { Select } from '../components/Select'
+import Select from '../components/Select'
 import { ContainerContact } from '../styles/stylesContact'
 import { useState } from 'react'
 
