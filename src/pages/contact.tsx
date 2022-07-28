@@ -7,6 +7,7 @@ import Input from '../components/Input'
 import Select from '../components/Select'
 import { ContainerContact } from '../styles/stylesContact'
 import { useState } from 'react'
+import TextArea from '../components/TextArea'
 
 type CreatMessageContact = {
   name: string
@@ -117,9 +118,8 @@ export default function Contact() {
               </option>
               <option value="dizer oi">Só queria dizer oi!</option>
             </Select>
-            <Input
+            <TextArea
               label="Mensagem"
-              type="text"
               id="message"
               placeholder="Qual é a sua mensagem?"
               {...register('message')}

@@ -1,0 +1,32 @@
+import styled from 'styled-components'
+
+export const ContainerTextArea = styled.div`
+  label {
+    display: block;
+    color: var(--gray-500);
+    margin-bottom: 1.5rem;
+  }
+
+  textarea {
+    border: 0;
+    border-bottom: 1px solid var(--gray-200);
+    font-size: 1rem;
+    width: 100%;
+    height: 2.8rem;
+
+    transition: border 0.2s;
+
+    ::placeholder {
+      color: var(--black);
+      font-weight: 500;
+    }
+
+    &:focus {
+      border-bottom: 1px solid var(--magenta);
+    }
+  }
+
+  span {
+    color: var(--error);
+  }
+`
