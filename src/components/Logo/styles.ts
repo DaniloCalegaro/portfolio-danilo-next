@@ -7,7 +7,7 @@ export const ContainerLogo = styled.div<Props>`
   line-height: 1.2;
   display: flex;
   align-items: center;
-  cursor: pointer;
+  cursor: default;
 
   .logo {
     margin-right: 1rem;
@@ -54,27 +54,27 @@ export const ContainerLogo = styled.div<Props>`
     }
   }
 
-  &:hover {
+  /* &:hover {
     .logo {
       border-color: ${props =>
-        props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
+    props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
 
       strong {
         color: ${props =>
-          props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
+    props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
       }
     }
 
     .info {
       strong {
         color: ${props =>
-          props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
+    props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
       }
 
       span {
         color: ${props =>
-          props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
+    props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
       }
     }
-  }
+  } */
 `
