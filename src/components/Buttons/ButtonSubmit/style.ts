@@ -1,7 +1,13 @@
 import styled from 'styled-components'
 
-export const ContainerBtnContactMe = styled.div`
-  background: var(--gray-500);
+type Props = {
+  isSendingMessage: boolean
+}
+
+export const ContainerBtnContactMe = styled.div<Props>`
+  background: ${props =>
+    props.isSendingMessage ? 'var(--magenta)' : 'var(--gray-500)'};
+
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   display: inline-flex;
@@ -12,6 +18,8 @@ export const ContainerBtnContactMe = styled.div`
     color: var(--white);
     background: none;
     border: 0;
+
+    cursor: ${props => props.isSendingMessage && 'not-allowed'};
 
     display: flex;
     align-items: center;

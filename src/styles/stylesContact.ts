@@ -43,6 +43,12 @@ export const ContainerContact = styled.div`
         font-weight: 500;
       }
     }
+
+    .alertMessage {
+      display: block;
+      margin-top: 1rem;
+      color: var(--magenta);
+    }
   }
 
   @media (min-width: 720px) {

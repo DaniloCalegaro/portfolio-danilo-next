@@ -7,6 +7,7 @@ import { ButtonSubmit } from '../components/Buttons/ButtonSubmit'
 import { Input } from '../components/Input'
 import { Select } from '../components/Select'
 import { ContainerContact } from '../styles/stylesContact'
+import { useState } from 'react'
 
 type CreatMessageContact = {
   name: string
@@ -27,11 +28,13 @@ export default function Contact() {
   const templateID = process.env.NEXT_PUBLIC_REACT_APP_TEMPLATE_ID as string
   const serviceID = process.env.NEXT_PUBLIC_REACT_APP_SERVICE_ID as string
 
+  const [isSendingMessage, setIsSendingMessage] = useState(false)
+  const [messageSend, SetMessageSend] = useState('')
+
   const {
     register,
     handleSubmit,
-    formState,
-    formState: { errors }
+    formState: { errors, isSubmitting }
   } = useForm<CreatMessageContact>({
     resolver: yupResolver(createNewMessageSchema)
   })
@@ -40,13 +43,18 @@ export default function Contact() {
     CreatMessageContact
   > = values => {
     console.log(values)
+    setIsSendingMessage(true)
 
     emailjs.sendForm(serviceID, templateID, '#contact-form', userID).then(
       result => {
-        console.log('Sucess...', result.text)
+        //console.log('Sucess...', result.text)
+        setIsSendingMessage(false)
+        SetMessageSend('Mensagem enviado com sucesso!')
       },
       error => {
         console.log('Failed...', error.text)
+        setIsSendingMessage(false)
+        SetMessageSend('Falha ao enviar a mensagem! ❌')
       }
     )
   }
@@ -97,16 +105,16 @@ export default function Contact() {
               <option value="" disabled>
                 Em quê você está interessado?
               </option>
-              <option value="unique_project">
+              <option value="projeto único">
                 Preciso de ajuda com projeto único
               </option>
-              <option value="long_term_partnership">
+              <option value="parceria de longo prazo">
                 Procurando uma parceria de longo prazo
               </option>
-              <option value="developer_full-time">
+              <option value="desenvolvedor em tempo integral">
                 Quer contratar um desenvolvedor em tempo integral
               </option>
-              <option value="say_hi">Só queria dizer oi!</option>
+              <option value="dizer oi">Só queria dizer oi!</option>
             </Select>
             <Input
               label="Mensagem"
@@ -120,9 +128,11 @@ export default function Contact() {
 
           <ButtonSubmit
             type="submit"
-            name="Enviar mensagem"
-            icon={<ArrowRight size={20} />}
+            name={'Enviar mensagem'}
+            isSendingMessage={isSendingMessage}
           />
+
+          <strong className="alertMessage">{messageSend}</strong>
         </form>
       </div>
     </ContainerContact>
