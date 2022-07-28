@@ -1,7 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import emailjs from 'emailjs-com'
 import * as yup from 'yup'
-import { ArrowRight } from 'phosphor-react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { ButtonSubmit } from '../components/Buttons/ButtonSubmit'
 import { Input } from '../components/Input'

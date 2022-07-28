@@ -10,8 +10,17 @@ import { fadeIn } from '../../motion/variants'
 import { ButtonRedirect } from '../Buttons/ButtonRedirect'
 
 import { ContainerFooter } from './styles'
+import { useRouter } from 'next/router'
 
 export function Footer() {
+  const { asPath } = useRouter()
+
+  let isActive = false
+
+  if (asPath.startsWith('/contact')) {
+    isActive = true
+  }
+
   return (
     <ContainerFooter>
       <motion.div
@@ -28,11 +37,13 @@ export function Footer() {
 
         <ul>
           <li>
-            <ButtonRedirect
-              icon={<Envelope size={20} />}
-              name="Entre em contato"
-              href="/contact"
-            />
+            {!isActive && (
+              <ButtonRedirect
+                icon={<Envelope size={20} />}
+                name="Entre em contato"
+                href="/contact"
+              />
+            )}
           </li>
         </ul>
       </motion.div>
