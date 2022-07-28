@@ -33,7 +33,8 @@ export default function Contact() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting }
+    reset,
+    formState: { errors }
   } = useForm<CreatMessageContact>({
     resolver: yupResolver(createNewMessageSchema)
   })
@@ -48,6 +49,7 @@ export default function Contact() {
       result => {
         //console.log('Sucess...', result.text)
         setIsSendingMessage(false)
+        reset()
         SetMessageSend('Mensagem enviada com sucesso!')
       },
       error => {
