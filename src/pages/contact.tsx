@@ -23,9 +23,9 @@ const createNewMessageSchema = yup.object().shape({
 })
 
 export default function Contact() {
-  const userID = process.env.REACT_APP_USER_ID
-  const templateID = process.env.REACT_APP_TEMPLATE_ID
-  const serviceID = process.env.REACT_APP_SERVICE_ID
+  const userID = process.env.NEXT_PUBLIC_REACT_APP_USER_ID
+  const templateID = process.env.NEXT_PUBLIC_REACT_APP_TEMPLATE_ID as string
+  const serviceID = process.env.NEXT_PUBLIC_REACT_APP_SERVICE_ID as string
 
   const {
     register,
