@@ -42,7 +42,7 @@ export default function Contact() {
   const handleCreateNewMessageContact: SubmitHandler<
     CreatMessageContact
   > = values => {
-    console.log(values)
+    //console.log(values)
     setIsSendingMessage(true)
 
     emailjs.sendForm(serviceID, templateID, '#contact-form', userID).then(
