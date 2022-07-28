@@ -62,16 +62,16 @@ export function Menu() {
                 variants={moveMenuItemVariants}
               >
                 <li>
-                  <a href="#header">Início</a>
+                  <a href="/#header">Início</a>
                 </li>
                 <li>
-                  <a href="#aboutMe">Sobre Mim</a>
+                  <a href="/#aboutMe">Sobre Mim</a>
                 </li>
                 <li>
-                  <a href="#projects">Projetos</a>
+                  <a href="/#projects">Projetos</a>
                 </li>
                 <li>
-                  <a href="#needDeveloper">Contato </a>
+                  <a href="/contact">Contato </a>
                 </li>
               </motion.ul>
               <motion.footer

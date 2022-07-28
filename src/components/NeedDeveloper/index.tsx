@@ -17,14 +17,8 @@ export function NeedDeveloper() {
         <motion.span className="index" variants={fadeIn('up')}>
           Precisa de um desenvolvedor?
         </motion.span>
-        <motion.a
-          href="https://www.linkedin.com/in/danilo-calegaro/"
-          target="_blank"
-          rel="noreferrer"
-          className="title"
-          variants={fadeIn('up')}
-        >
-          Vamos trabalhar juntos? <ArrowRight size={50} />
+        <motion.a href="/contact" className="title" variants={fadeIn('up')}>
+          Vamos trabalhar juntos <ArrowRight size={50} />
         </motion.a>
       </motion.div>
     </ContainerNeedDeveloper>

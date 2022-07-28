@@ -16,6 +16,7 @@ export default createGlobalStyle`
     --gray-800: #434447;
     --black: #0f141e;
     --magenta: #ff3366;
+    --error: #EC3B14;
   }
 
   ::-webkit-scrollbar {
@@ -54,7 +55,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  body, input, button {
+  body, input, button, select {
     font-family: 'Poppins', sans-serif;
     font-size: 0.875rem;
   }

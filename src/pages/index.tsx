@@ -1,12 +1,11 @@
 import { motion, useScroll, useSpring } from 'framer-motion'
-import { useEffect, useState } from 'react'
 import { AboutMe } from '../components/AboutMe'
 import { ButtonScroll } from '../components/Buttons/ButtonScroll'
 import { ButtonUp } from '../components/Buttons/ButtonUp'
 import { Initial } from '../components/Initial'
 import { NeedDeveloper } from '../components/NeedDeveloper'
 import { ProjectsSelected } from '../components/ProjectsSelected'
-import { Container } from '../styles/styles'
+import { ContainerIndex } from '../styles/stylesIndex'
 
 export default function Home() {
   const { scrollYProgress, scrollY } = useScroll()
@@ -17,7 +16,7 @@ export default function Home() {
   })
 
   return (
-    <Container>
+    <ContainerIndex>
       <motion.div className="progress-bar" style={{ scaleX }} />
       <Initial />
       <AboutMe />
@@ -33,6 +32,6 @@ export default function Home() {
           <ButtonUp />
         </div>
       </section>
-    </Container>
+    </ContainerIndex>
   )
 }
