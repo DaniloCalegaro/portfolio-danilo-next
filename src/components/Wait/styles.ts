@@ -1,15 +1,14 @@
 import styled from 'styled-components'
 
 export const ContainerWait = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: var(--black);
 
   position: relative;
-  z-index: 20;
 
   .containerInfos {
     max-width: 1280px;

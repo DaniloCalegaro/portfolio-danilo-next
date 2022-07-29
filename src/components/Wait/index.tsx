@@ -1,4 +1,5 @@
 import { CSSProperties, useEffect } from 'react'
+import Modal from 'react-modal'
 import { BounceLoader } from 'react-spinners'
 import { Logo } from '../Logo'
 import { ContainerWait } from './styles'
@@ -7,32 +8,56 @@ const override: CSSProperties = {
   margin: '0 auto'
 }
 
-export function Wait() {
-  useEffect(() => {
-    document.body.style.overflowY = 'hidden'
-    Wait(5000)
-  }, [])
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    transition: '0.5s'
+  },
+  overlay: { zIndex: 1000 }
+}
 
-  const Wait = async (ms: number) => {
-    await new Promise(resolve => setTimeout(resolve, ms))
-    console.log('Waiting for')
-  }
+interface WaitModalProps {
+  modalIsOpen: boolean
+  setModalIsOpen: () => void
+}
+
+export function WaitModal({ modalIsOpen, setModalIsOpen }: WaitModalProps) {
+  useEffect(() => {
+    if (modalIsOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+  }, [modalIsOpen])
 
   return (
-    <ContainerWait>
-      <div className="containerInfos">
-        <Logo isBaseDark />
-        <BounceLoader
-          color={'#878a8f'}
-          loading={true}
-          cssOverride={override}
-          size={150}
-        />
-        <div className="containerPageLoading">
-          <span className="index">Bem vindo</span>
-          <strong className="title">Espere um segundo</strong>
+    <Modal
+      isOpen={modalIsOpen}
+      onRequestClose={setModalIsOpen}
+      style={customStyles}
+      contentLabel="Example Modal"
+      closeTimeoutMS={1000}
+    >
+      <ContainerWait>
+        <div className="containerInfos">
+          <Logo isBaseDark />
+          <BounceLoader
+            color={'#878a8f'}
+            loading={true}
+            cssOverride={override}
+            size={150}
+          />
+          <div className="containerPageLoading">
+            {/* <span className="index">Bem vindo</span> */}
+            <strong className="title">Espere um segundo</strong>
+          </div>
         </div>
-      </div>
-    </ContainerWait>
+      </ContainerWait>
+    </Modal>
   )
 }
