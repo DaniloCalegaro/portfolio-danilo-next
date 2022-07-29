@@ -1,19 +1,32 @@
-import { ElementType, HTMLAttributeAnchorTarget, ReactNode } from 'react'
-import { ContainerBtnContactMe } from './style'
+import React, { FC, forwardRef } from 'react'
+import { ContainerBtnContactMe } from './styles'
 
-interface ButtonRedirectProps
-  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+export type ButtonRedirectProps = {
   name?: string
   icon?: React.ReactNode
+  url?: string
+  target_blank?: boolean
 }
 
-export function ButtonRedirect({ name, icon, ...rest }: ButtonRedirectProps) {
+const ButtonRedirect: FC<ButtonRedirectProps> = forwardRef<
+  HTMLAnchorElement,
+  ButtonRedirectProps
+>(({ name, url, icon, target_blank = false, ...props }, ref) => {
   return (
     <ContainerBtnContactMe>
-      <a {...rest}>
+      <a
+        ref={ref}
+        href={url}
+        target={target_blank ? '_blank' : '_self'}
+        {...props}
+      >
         {icon}
         {name}
       </a>
     </ContainerBtnContactMe>
   )
-}
+})
+
+ButtonRedirect.displayName = 'ButtonRedirect'
+
+export default ButtonRedirect

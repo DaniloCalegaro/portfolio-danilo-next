@@ -7,7 +7,7 @@ import {
 } from 'phosphor-react'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../../motion/variants'
-import { ButtonRedirect } from '../Buttons/ButtonRedirect'
+import ButtonRedirect from '../Buttons/ButtonRedirect'
 
 import { ContainerFooter } from './styles'
 import { useRouter } from 'next/router'

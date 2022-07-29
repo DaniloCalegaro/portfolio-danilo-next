@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { format, parseISO } from 'date-fns'
 import ptBr from 'date-fns/locale/pt'
-import { ButtonRedirect } from '../Buttons/ButtonRedirect'
+import ButtonRedirect from '../Buttons/ButtonRedirect'
 
 import repositoriesJson from '../../../repositories.json'
 
@@ -142,8 +142,8 @@ export function ProjectsSelected() {
           <ButtonRedirect
             icon={<GithubLogo size={20} />}
             name="Ver todos"
-            href="https://github.com/DaniloCalegaro?tab=repositories"
-            target="_blank"
+            url="https://github.com/DaniloCalegaro?tab=repositories"
+            target_blank
           />
         </div>
       </motion.div>

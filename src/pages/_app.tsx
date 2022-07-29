@@ -14,7 +14,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <title>Danilo - Developer</title>
       </Head>
       <GlobalStyles />
-      <Wait />
 
       <Header />
       <Component {...pageProps} />
