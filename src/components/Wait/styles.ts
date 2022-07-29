@@ -1,7 +1,10 @@
 import styled from 'styled-components'
 
 export const ContainerWait = styled.div`
-  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
   height: 100vh;
   background: var(--black);
 
@@ -12,6 +15,7 @@ export const ContainerWait = styled.div`
     max-width: 1280px;
     height: 100%;
     padding: 2rem 1.5rem;
+    margin: 0 auto;
 
     display: flex;
     flex-direction: column;

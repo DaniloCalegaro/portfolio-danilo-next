@@ -10,15 +10,13 @@ const override: CSSProperties = {
 export function Wait() {
   useEffect(() => {
     document.body.style.overflowY = 'hidden'
-
-    const Wait = async (ms: number) => {
-      await new Promise(resolve => setTimeout(resolve, 2000))
-    }
-
-    Wait(500)
-
-    console.log('Waiting for')
+    Wait(5000)
   }, [])
+
+  const Wait = async (ms: number) => {
+    await new Promise(resolve => setTimeout(resolve, ms))
+    console.log('Waiting for')
+  }
 
   return (
     <ContainerWait>
