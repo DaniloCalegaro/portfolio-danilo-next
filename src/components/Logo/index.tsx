@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { ContainerLogo } from './styles'
 
 interface LogoProps {
@@ -6,14 +7,16 @@ interface LogoProps {
 
 export function Logo({ isBaseDark = false }: LogoProps) {
   return (
-    <ContainerLogo isBaseDark={isBaseDark}>
-      <div className="logo">
-        <strong>DC</strong>
-      </div>
-      <div className="info">
-        <strong>Danilo Calegaro</strong>
-        <span>Front-end developer</span>
-      </div>
-    </ContainerLogo>
+    <Link href="/">
+      <ContainerLogo isBaseDark={isBaseDark}>
+        <div className="logo">
+          <strong>DC</strong>
+        </div>
+        <div className="info">
+          <strong className="name">Danilo Calegaro</strong>
+          <span className="description">Front-end developer</span>
+        </div>
+      </ContainerLogo>
+    </Link>
   )
 }

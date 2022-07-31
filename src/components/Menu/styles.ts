@@ -42,7 +42,7 @@ export const ContainerMenuSideBar = styled.div`
       display: flex;
       justify-content: space-between;
 
-      a {
+      .index {
         color: var(--white);
         display: flex;
         line-height: 0;

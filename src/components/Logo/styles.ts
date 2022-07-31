@@ -7,7 +7,6 @@ export const ContainerLogo = styled.a<Props>`
   line-height: 1.2;
   display: flex;
   align-items: center;
-  cursor: default;
 
   .logo {
     margin-right: 1rem;
@@ -35,7 +34,7 @@ export const ContainerLogo = styled.a<Props>`
   }
 
   .info {
-    strong {
+    .name {
       display: block;
       font-size: 1.4rem;
       color: ${props =>
@@ -43,7 +42,7 @@ export const ContainerLogo = styled.a<Props>`
       transition: color 0.2s;
     }
 
-    span {
+    .description {
       text-transform: uppercase;
       font-size: 0.7rem;
       letter-spacing: 3px;
@@ -54,27 +53,27 @@ export const ContainerLogo = styled.a<Props>`
     }
   }
 
-  /* &:hover {
+  &:hover {
     .logo {
       border-color: ${props =>
-    props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
+        props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
 
       strong {
         color: ${props =>
-    props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
+          props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
       }
     }
 
     .info {
       strong {
         color: ${props =>
-    props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
+          props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
       }
 
       span {
         color: ${props =>
-    props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
+          props.isBaseDark ? 'var(--gray-200)' : 'var(--gray-500)'};
       }
     }
-  } */
+  }
 `
