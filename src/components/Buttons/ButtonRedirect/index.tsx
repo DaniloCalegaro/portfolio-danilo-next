@@ -18,6 +18,7 @@ const ButtonRedirect: FC<ButtonRedirectProps> = forwardRef<
         ref={ref}
         href={url}
         target={target_blank ? '_blank' : '_self'}
+        rel="noreferrer"
         {...props}
       >
         {icon}
