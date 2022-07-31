@@ -19,8 +19,9 @@ export function AboutMe() {
         <motion.strong variants={fadeIn('up')}>
           Sou Danilo Calegaro, um desenvolvedor front-end que está
           constantemente antenado à novas tendências tecnológicas, formado em
-          Sistemasde Informação, fiz cursos técnicos em Desenvolvimento Web pela
-          Rocketseat, IGTI, Digital Innovation One e entre outras instituições.
+          Sistemas de Informação, fiz cursos técnicos em Desenvolvimento Web
+          pela Rocketseat, IGTI, Digital Innovation One e entre outras
+          instituições.
         </motion.strong>
         <motion.span variants={fadeIn('up')}>
           Como desenvolvedor sou apaixonado em aplicar minha habilidades para

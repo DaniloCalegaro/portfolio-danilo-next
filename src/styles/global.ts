@@ -107,6 +107,19 @@ export default createGlobalStyle`
     opacity: 0;
   }
 
+  #nprogress .bar {
+  background: var(--magenta) !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px var(--magenta), 0 0 5px var(--magenta);
+}
+
+#nprogress .spinner-icon {
+  border-top-color: var(--magenta);
+  border-left-color: var(--magenta);
+}
+
   @media (min-width: 720px) {
     .title {
       font-size: 3.75rem;

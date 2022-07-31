@@ -3,7 +3,7 @@ import styled from 'styled-components'
 type Props = {
   isBaseDark: boolean
 }
-export const ContainerLogo = styled.div<Props>`
+export const ContainerLogo = styled.a<Props>`
   line-height: 1.2;
   display: flex;
   align-items: center;

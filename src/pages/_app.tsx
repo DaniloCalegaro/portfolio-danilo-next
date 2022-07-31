@@ -8,6 +8,8 @@ import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { WaitModal } from '../components/Wait'
 
+import NProgress from 'nprogress' //nprogress module
+import 'nprogress/nprogress.css' //styles of nprogress
 import GlobalStyles from '../styles/global'
 
 Modal.setAppElement('#__next')
@@ -19,11 +21,13 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const handleStart = (url: string) => {
       //console.log(`Loading: ${url}`)
+      NProgress.start()
       setModalIsOpen(true)
     }
     const handleStop = () => {
       //console.log(`Complete page`)
-      wait(2000, closeModal)
+      NProgress.done()
+      wait(500, closeModal)
     }
 
     router.events.on('routeChangeStart', handleStart)
