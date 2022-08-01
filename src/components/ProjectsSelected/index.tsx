@@ -18,7 +18,11 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import { ContainerProjectsSelected, SwiperBox } from './styles'
+import {
+  ButtonMoreProjects,
+  ContainerProjectsSelected,
+  SwiperBox
+} from './styles'
 interface ApiGithubRepos {
   id: number
   name: string
@@ -57,96 +61,95 @@ export function ProjectsSelected() {
   const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1)
 
   return (
-    <ContainerProjectsSelected id="projects">
-      <motion.div
-        className="info"
+    <ContainerProjectsSelected
+      id="projects"
+      variants={fadeIn('up')}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0 }}
+    >
+      <motion.span className="index" variants={fadeIn('up')}>
+        Projetos selecionados
+      </motion.span>
+      <motion.strong className="title" variants={fadeIn('up')}>
+        Estudos front-end
+      </motion.strong>
+
+      <SwiperBox
         variants={fadeIn('up')}
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0 }}
       >
-        <motion.span className="index" variants={fadeIn('up')}>
-          Projetos selecionados
-        </motion.span>
-        <motion.strong className="title" variants={fadeIn('up')}>
-          Estudos front-end
-        </motion.strong>
-
-        <SwiperBox>
-          <Swiper
-            breakpoints={{
-              640: {
-                slidesPerView: 1,
-                slidesPerGroup: 1
-              },
-              768: {
-                slidesPerView: 2,
-                slidesPerGroup: 2
-              }
-            }}
-            spaceBetween={30}
-            loop={false}
-            loopFillGroupWithBlank={false}
-            pagination={{
-              clickable: true
-            }}
-            navigation={true}
-            mousewheel={true}
-            preloadImages={true}
-            // lazy={{
-            //   loadPrevNext: true,
-            //   loadPrevNextAmount: 2
-            // }}
-            modules={[Pagination, Navigation, Mousewheel]}
-          >
-            {repositories.map(repository => (
-              <SwiperSlide key={repository.id}>
-                <div className="detailsProjects">
-                  <div className="info">
-                    <span className="index">{repository.created_at}</span>
-                    <a
-                      className="linkRepository"
-                      href={repository.htmlUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {repository.name}
-                    </a>
-                    <span className="tags">{repository.tags}</span>
-                  </div>
-
-                  {repository.previewUrl && (
-                    <a
-                      className="preview"
-                      href={repository.previewUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Preview
-                    </a>
-                  )}
+        <Swiper
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              slidesPerGroup: 1
+            },
+            768: {
+              slidesPerView: 2,
+              slidesPerGroup: 2
+            }
+          }}
+          spaceBetween={30}
+          loop={false}
+          loopFillGroupWithBlank={false}
+          pagination={{
+            clickable: true
+          }}
+          navigation={true}
+          mousewheel={true}
+          preloadImages={true}
+          modules={[Pagination, Navigation, Mousewheel]}
+        >
+          {repositories.map(repository => (
+            <SwiperSlide key={repository.id}>
+              <div className="detailsProjects">
+                <div className="info">
+                  <span className="index">{repository.created_at}</span>
+                  <a
+                    className="linkRepository"
+                    href={repository.htmlUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {repository.name}
+                  </a>
+                  <span className="tags">{repository.tags}</span>
                 </div>
-                <Image
-                  src={repository.urlImagePortfolio}
-                  alt={`foto de ${repository.name}`}
-                  width="720"
-                  height="352"
-                  priority={true}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </SwiperBox>
 
-        <div className="buttonMoreProjects">
-          <ButtonRedirect
-            icon={<GithubLogo size={20} />}
-            name="Ver todos"
-            url="https://github.com/DaniloCalegaro?tab=repositories"
-            target_blank
-          />
-        </div>
-      </motion.div>
+                {repository.previewUrl && (
+                  <a
+                    className="preview"
+                    href={repository.previewUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Preview
+                  </a>
+                )}
+              </div>
+              <Image
+                src={repository.urlImagePortfolio}
+                alt={`foto de ${repository.name}`}
+                width="720"
+                height="352"
+                priority={true}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </SwiperBox>
+
+      <ButtonMoreProjects>
+        <ButtonRedirect
+          icon={<GithubLogo size={20} />}
+          name="Ver todos"
+          url="https://github.com/DaniloCalegaro?tab=repositories"
+          target_blank
+        />
+      </ButtonMoreProjects>
     </ContainerProjectsSelected>
   )
 }

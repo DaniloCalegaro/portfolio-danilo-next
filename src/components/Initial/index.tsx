@@ -1,12 +1,11 @@
-import { ContainerInitial } from './styles'
+import { BackgroundDev, ContainerInitial, ImgProfile, Info } from './styles'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../../motion/variants'
 
 export function Initial() {
   return (
     <ContainerInitial>
-      <motion.div
-        className="info"
+      <Info
         variants={fadeIn('up')}
         initial="offscreen"
         whileInView="onscreen"
@@ -31,23 +30,15 @@ export function Initial() {
             </a>
           </p>
         </motion.div>
-      </motion.div>
+      </Info>
 
-      <motion.div
-        className="imgProfile"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-      >
+      <ImgProfile initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <img src="/images/bg_home.png" alt="foto Danilo" />
-      </motion.div>
+      </ImgProfile>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="backgroundDev"
-      >
+      <BackgroundDev initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <strong>developer</strong>
-      </motion.div>
+      </BackgroundDev>
     </ContainerInitial>
   )
 }

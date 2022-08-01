@@ -8,7 +8,7 @@ export const ContainerLogo = styled.a<Props>`
   display: flex;
   align-items: center;
 
-  .logo {
+  .design {
     margin-right: 1rem;
     padding: 0.3rem;
     border: ${props =>

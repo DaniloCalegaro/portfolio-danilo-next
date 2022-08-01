@@ -3,7 +3,7 @@ import { AnimatePresence, useCycle, motion } from 'framer-motion'
 import { List, X } from 'phosphor-react'
 import { moveMenu, moveMenuItemVariants } from '../../motion/variants'
 import { Logo } from '../Logo'
-import { ContainerMenuSideBar } from './styles'
+import { ContainerMenuSideBar, Main } from './styles'
 
 export function Menu() {
   const [open, cycleOpen] = useCycle(false, true)
@@ -22,7 +22,7 @@ export function Menu() {
         </i>
       </a>
 
-      <main>
+      <Main>
         <AnimatePresence>
           {open && (
             <motion.nav
@@ -96,7 +96,7 @@ export function Menu() {
             </motion.nav>
           )}
         </AnimatePresence>
-      </main>
+      </Main>
     </ContainerMenuSideBar>
   )
 }

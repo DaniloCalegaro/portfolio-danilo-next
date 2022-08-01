@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 import { fadeIn } from '../../motion/variants'
 import ButtonRedirect from '../Buttons/ButtonRedirect'
 
-import { ContainerFooter } from './styles'
+import { Contacts, ContainerFooter, SocialNetworks } from './styles'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
@@ -24,8 +24,7 @@ export function Footer() {
 
   return (
     <ContainerFooter>
-      <motion.div
-        className="contacts"
+      <Contacts
         variants={fadeIn('up')}
         initial="offscreen"
         whileInView="onscreen"
@@ -48,9 +47,9 @@ export function Footer() {
             )}
           </li>
         </ul>
-      </motion.div>
+      </Contacts>
 
-      <motion.div
+      <SocialNetworks
         className="socialNetworks"
         variants={fadeIn('up')}
         initial="offscreen"
@@ -96,7 +95,7 @@ export function Footer() {
             </a>
           </li>
         </ul>
-      </motion.div>
+      </SocialNetworks>
     </ContainerFooter>
   )
 }

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 export const ContainerFooter = styled.footer`
@@ -46,3 +47,8 @@ export const ContainerFooter = styled.footer`
     max-width: 20rem;
   }
 `
+
+export const Contacts = styled(motion.div)`
+  max-width: 20rem;
+`
+export const SocialNetworks = styled(motion.div)``

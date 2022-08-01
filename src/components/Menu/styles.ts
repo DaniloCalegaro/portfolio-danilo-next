@@ -21,7 +21,9 @@ export const ContainerMenuSideBar = styled.div`
       }
     }
   }
+`
 
+export const Main = styled.main`
   nav {
     position: fixed;
     top: 0;

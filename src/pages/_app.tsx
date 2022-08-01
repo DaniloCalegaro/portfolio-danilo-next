@@ -8,8 +8,8 @@ import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { WaitModal } from '../components/Wait'
 
-import NProgress from 'nprogress' //nprogress module
-import 'nprogress/nprogress.css' //styles of nprogress
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 import GlobalStyles from '../styles/global'
 
 Modal.setAppElement('#__next')

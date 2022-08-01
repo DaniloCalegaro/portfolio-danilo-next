@@ -7,8 +7,6 @@ export const ContainerBtnScroll = styled.i`
     border: solid 2px var(--magenta);
     border-radius: 8px;
 
-    /* display: flex;
-  justify-content: center; */
     position: relative;
 
     &::after {

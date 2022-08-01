@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion'
 import { fadeIn } from '../../motion/variants'
 
-import { ContainerAboutMe } from './styles'
+import { ContainerAboutMe, ContainerskillsComponent } from './styles'
 
 export function AboutMe() {
   return (
-    <ContainerAboutMe id="aboutMe">
-      <motion.div
+    <>
+      <ContainerAboutMe
+        id="aboutMe"
         className="wordsAbout"
         variants={fadeIn('up')}
         initial="offscreen"
@@ -29,9 +30,9 @@ export function AboutMe() {
           Nos meus tempos livres gosto aventuras de moto e mountain bike, além
           assistir um bom filme ou série.
         </motion.span>
-      </motion.div>
+      </ContainerAboutMe>
 
-      <motion.div
+      <ContainerskillsComponent
         className="skillsComponent"
         variants={fadeIn('up')}
         initial="offscreen"
@@ -53,7 +54,7 @@ export function AboutMe() {
             <li>Photoshop, CorelDraw</li>
           </ul>
         </motion.div>
-      </motion.div>
-    </ContainerAboutMe>
+      </ContainerskillsComponent>
+    </>
   )
 }

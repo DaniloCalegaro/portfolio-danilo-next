@@ -9,7 +9,7 @@ export function Logo({ isBaseDark = false }: LogoProps) {
   return (
     <Link href="/">
       <ContainerLogo isBaseDark={isBaseDark}>
-        <div className="logo">
+        <div className="design">
           <strong>DC</strong>
         </div>
         <div className="info">

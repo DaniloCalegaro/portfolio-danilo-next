@@ -1,19 +1,18 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
-export const ContainerProjectsSelected = styled.section`
-  > div {
-    > span {
-      display: block;
-    }
-
-    .buttonMoreProjects {
-      float: right;
-      margin-top: 1rem;
-    }
+export const ContainerProjectsSelected = styled(motion.section)`
+  > span {
+    display: block;
   }
 `
 
-export const SwiperBox = styled.div`
+export const ButtonMoreProjects = styled.div`
+  float: right;
+  margin-top: 1rem;
+`
+
+export const SwiperBox = styled(motion.div)`
   .swiper {
     margin-top: 2rem;
     width: 100%;
