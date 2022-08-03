@@ -8,7 +8,7 @@ export default createGlobalStyle`
     outline: 0;
   }
 
-  :root {
+  /* :root {
     --white: #ffffff;
     --gray-100: #cfd0d2;
     --gray-200: #b7b8bb;
@@ -17,7 +17,7 @@ export default createGlobalStyle`
     --black: #0f141e;
     --magenta: #ff3366;
     --error: #EC3B14;
-  }
+  } */
 
   ::-webkit-scrollbar {
     width: 0.5rem;
@@ -25,17 +25,17 @@ export default createGlobalStyle`
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: var(--gray-100); 
+    background: ${props => props.theme['gray-100']}; 
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--gray-500); 
+    background: ${props => props.theme['gray-500']}; 
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--gray-800); 
+    background: ${props => props.theme['gray-800']}; 
   }
 
   html {
@@ -50,8 +50,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background: var(--white);
-    color: var(--black);
+    background: ${props => props.theme['white']};
+    color: ${props => props.theme['black']};
     -webkit-font-smoothing: antialiased;
   }
 
@@ -66,7 +66,7 @@ export default createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: var(--black);
+    color: ${props => props.theme['black']};
   }
 
   button, a {
@@ -74,7 +74,7 @@ export default createGlobalStyle`
   }
 
   span {
-    color: var(--gray-500);
+    color: ${props => props.theme['gray-500']};
   }
 
   section + section {
@@ -91,7 +91,7 @@ export default createGlobalStyle`
   .title {
     font-size: 3rem;
     line-height: 3.4rem;
-    color: var(--black);
+    color: ${props => props.theme['black']};
   }
 
   .ReactModal__Overlay {
@@ -108,16 +108,17 @@ export default createGlobalStyle`
   }
 
   #nprogress .bar {
-  background: var(--magenta) !important;
+  background: ${props => props.theme['magenta']} !important;
 }
 
 #nprogress .peg {
-  box-shadow: 0 0 10px var(--magenta), 0 0 5px var(--magenta);
+  box-shadow: 0 0 10px ${props => props.theme['magenta']}, 0 0 5px ${props =>
+  props.theme['magenta']};
 }
 
 #nprogress .spinner-icon {
-  border-top-color: var(--magenta);
-  border-left-color: var(--magenta);
+  border-top-color: ${props => props.theme['magenta']};
+  border-left-color: ${props => props.theme['magenta']};
 }
 
   @media (min-width: 720px) {

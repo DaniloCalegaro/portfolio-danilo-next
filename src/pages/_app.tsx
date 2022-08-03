@@ -11,6 +11,8 @@ import { WaitModal } from '../components/Wait'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import GlobalStyles from '../styles/global'
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from '../styles/themes/default'
 
 Modal.setAppElement('#__next')
 
@@ -51,7 +53,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <>
+    <ThemeProvider theme={defaultTheme}>
       <Head>
         <title>Danilo - Developer</title>
       </Head>
@@ -62,6 +64,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
       <Footer />
       <Copyright />
-    </>
+    </ThemeProvider>
   )
 }

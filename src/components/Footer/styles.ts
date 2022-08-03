@@ -6,7 +6,7 @@ export const ContainerFooter = styled.footer`
   margin: 0 auto;
   padding: 1rem 1.5rem;
 
-  border-top: 1px solid var(--gray-100);
+  border-top: 1px solid ${props => props.theme['gray-100']};
 
   display: flex;
   justify-content: space-between;
@@ -18,7 +18,7 @@ export const ContainerFooter = styled.footer`
 
   p {
     margin-top: 1.5rem;
-    color: var(--gray-500);
+    color: ${props => props.theme['gray-500']};
     font-size: 1rem;
   }
 
@@ -37,7 +37,7 @@ export const ContainerFooter = styled.footer`
 
         svg {
           font-size: 2rem;
-          color: var(--gray-500);
+          color: ${props => props.theme['gray-500']};
         }
       }
     }

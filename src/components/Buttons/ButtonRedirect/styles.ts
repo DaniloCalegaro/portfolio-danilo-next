@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
 export const ContainerBtnContactMe = styled.div`
-  background: var(--gray-500);
+  background: ${props => props.theme['gray-500']};
   padding: 0.5rem 1rem;
   border-radius: 2rem;
 
   transition: background-color 0.2s;
 
   a {
-    color: var(--white);
+    color: ${props => props.theme['white']};
 
     display: flex;
     align-items: center;
@@ -16,10 +16,10 @@ export const ContainerBtnContactMe = styled.div`
   }
 
   > svg {
-    color: var(--white);
+    color: ${props => props.theme['white']};
   }
 
   &:hover {
-    background-color: var(--magenta);
+    background-color: ${props => props.theme['magenta']};
   }
 `

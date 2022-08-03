@@ -10,7 +10,7 @@ export const ContainerCopyright = styled.div`
   .logoCopyright {
     margin-right: 0.6rem;
     padding: 0.3rem;
-    border: solid 2px var(--gray-200);
+    border: solid 2px ${props => props.theme['gray-200']};
     width: 2.2rem;
     height: 2.2rem;
     border-radius: 50%;
@@ -21,7 +21,7 @@ export const ContainerCopyright = styled.div`
 
     strong {
       font-size: 0.9rem;
-      color: var(--gray-200);
+      color: ${props => props.theme['gray-200']};
     }
   }
 
@@ -29,12 +29,12 @@ export const ContainerCopyright = styled.div`
     span {
       display: block;
       font-size: 0.9rem;
-      color: var(--gray-200);
+      color: ${props => props.theme['gray-200']};
     }
 
     p {
       font-size: 0.6rem;
-      color: var(--gray-200);
+      color: ${props => props.theme['gray-200']};
     }
   }
 `

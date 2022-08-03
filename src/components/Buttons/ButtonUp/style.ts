@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ContainerBtnUp = styled.a`
   i {
-    background: var(--gray-500);
+    background: ${props => props.theme['gray-500']};
     padding: 1rem;
     line-height: 0;
     clip-path: circle(40%);
@@ -13,7 +13,7 @@ export const ContainerBtnUp = styled.a`
     //transition: opacity 0.2s, transform 0.2s;
 
     > svg {
-      color: var(--white);
+      color: ${props => props.theme['white']};
     }
   }
 `

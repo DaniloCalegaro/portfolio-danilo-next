@@ -15,7 +15,7 @@ export const ContainerAboutMe = styled(motion.section)`
   }
 
   span {
-    color: var(--gray-800);
+    color: ${props => props.theme['gray-800']};
   }
 
   span:last-child {
@@ -41,7 +41,7 @@ export const ContainerskillsComponent = styled(motion.section)`
   &::before {
     content: '';
     width: 100%;
-    border-top: solid 1px var(--gray-100);
+    border-top: solid 1px ${props => props.theme['gray-100']};
     margin-bottom: 2rem;
   }
 

@@ -47,7 +47,7 @@ export const ContainerContact = styled.div`
     .alertMessage {
       display: block;
       margin-top: 1rem;
-      color: var(--magenta);
+      color: ${props => props.theme['magenta']};
     }
   }
 

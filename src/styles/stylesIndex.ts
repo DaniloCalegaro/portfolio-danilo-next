@@ -35,7 +35,7 @@ export const ContainerIndex = styled.div`
     left: 0;
     right: 0;
     height: 2px;
-    background: var(--magenta);
+    background: ${props => props.theme['magenta']};
     transform-origin: 0%;
     z-index: 10;
   }

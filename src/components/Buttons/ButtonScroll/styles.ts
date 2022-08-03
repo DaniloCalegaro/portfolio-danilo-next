@@ -4,14 +4,14 @@ export const ContainerBtnScroll = styled.i`
   div {
     width: 1.1rem;
     height: 1.7rem;
-    border: solid 2px var(--magenta);
+    border: solid 2px ${props => props.theme['magenta']};
     border-radius: 8px;
 
     position: relative;
 
     &::after {
       content: '';
-      background: var(--magenta);
+      background: ${props => props.theme['magenta']};
       width: 0.2rem;
       height: 0.5rem;
       border-radius: 3px;
