@@ -6,7 +6,7 @@ export const ContainerWait = styled.div`
   right: 0;
   width: 100vw;
   height: 100vh;
-  background: var(--black);
+  background: ${props => props.theme['black']};
 
   position: relative;
 
@@ -22,13 +22,13 @@ export const ContainerWait = styled.div`
 
     .containerPageLoading {
       .index {
-        color: var(--white);
+        color: ${props => props.theme['white']};
         display: block;
         font-size: 1.2rem;
       }
 
       .title {
-        color: var(--white);
+        color: ${props => props.theme['white']};
       }
     }
   }

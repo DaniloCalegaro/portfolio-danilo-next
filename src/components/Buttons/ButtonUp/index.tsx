@@ -20,6 +20,7 @@ export function ButtonUp() {
         initial={'startscreen'}
         animate={positionPage < 24 ? 'startscreen' : 'movescreen'}
         variants={riseup}
+        whileHover={{ scale: 1.2 }}
       >
         <ArrowUp size="20" weight="bold" />
       </motion.i>

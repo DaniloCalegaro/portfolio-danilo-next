@@ -51,4 +51,12 @@ export const ContainerFooter = styled.footer`
 export const Contacts = styled(motion.div)`
   max-width: 20rem;
 `
-export const SocialNetworks = styled(motion.div)``
+export const SocialNetworks = styled(motion.div)`
+  li {
+    transition: transform 0.1s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+`

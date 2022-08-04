@@ -23,7 +23,7 @@ export const ContainerHeader = styled(motion.header)`
 
           &:hover {
             transform: scale(1, 1.2);
-            color: var(--magenta);
+            color: ${props => props.theme['magenta']};
           }
         }
       }

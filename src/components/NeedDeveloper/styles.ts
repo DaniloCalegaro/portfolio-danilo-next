@@ -19,7 +19,7 @@ export const ContainerNeedDeveloper = styled(motion.section)`
 
   a:hover {
     //transform: scale(1.05);
-    color: var(--gray-500);
+    color: ${props => props.theme['gray-500']};
   }
 
   svg {
@@ -36,7 +36,7 @@ export const ContainerNeedDeveloper = styled(motion.section)`
 
       display: block;
       margin-top: 0.5rem;
-      background: var(--magenta);
+      background: ${props => props.theme['magenta']};
       transition: width 0.2s, opacity 0.4s;
     }
 
@@ -46,7 +46,7 @@ export const ContainerNeedDeveloper = styled(motion.section)`
     }
 
     a:hover {
-      color: var(--black);
+      color: ${props => props.theme['black']};
     }
   }
 `

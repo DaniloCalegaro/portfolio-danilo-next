@@ -17,7 +17,7 @@ export const Info = styled(motion.div)`
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 1rem;
-    color: var(--black);
+    color: ${props => props.theme['black']};
   }
 
   > p {
@@ -32,14 +32,14 @@ export const Info = styled(motion.div)`
       gap: 1rem;
 
       strong {
-        color: var(--black);
+        color: ${props => props.theme['black']};
         transition: color 0.2s;
       }
     }
 
     a:hover {
       strong {
-        color: var(--magenta);
+        color: ${props => props.theme['magenta']};
       }
     }
   }
@@ -99,7 +99,7 @@ export const BackgroundDev = styled(motion.div)`
 
   strong {
     font-size: calc(18vw);
-    color: var(--white);
+    color: ${props => props.theme['white']};
     text-shadow: 0px 0px 80px rgba(0, 0, 0, 0.1);
   }
 `

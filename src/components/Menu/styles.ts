@@ -6,18 +6,18 @@ export const ContainerMenuSideBar = styled.div`
     gap: 0.5rem;
 
     span {
-      color: var(--black);
+      color: ${props => props.theme['black']};
       font-weight: 500;
     }
 
     svg {
-      color: var(--black);
+      color: ${props => props.theme['black']};
       transition: color 0.2s;
     }
 
     &:hover {
       svg {
-        color: var(--magenta);
+        color: ${props => props.theme['magenta']};
       }
     }
   }
@@ -30,7 +30,7 @@ export const Main = styled.main`
     right: 0;
     width: 100%;
     height: 100vh;
-    background: var(--black);
+    background: ${props => props.theme['black']};
 
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@ export const Main = styled.main`
       justify-content: space-between;
 
       .index {
-        color: var(--white);
+        color: ${props => props.theme['white']};
         display: flex;
         line-height: 0;
         align-items: center;
@@ -57,7 +57,7 @@ export const Main = styled.main`
 
         &:hover {
           svg {
-            color: var(--magenta);
+            color: ${props => props.theme['magenta']};
           }
         }
       }
@@ -75,7 +75,7 @@ export const Main = styled.main`
 
       li {
         a {
-          color: var(--white);
+          color: ${props => props.theme['white']};
           font-size: 3rem;
           font-weight: 800;
 
@@ -87,7 +87,7 @@ export const Main = styled.main`
 
             display: block;
             //margin-top: 0rem;
-            background: var(--magenta);
+            background: ${props => props.theme['magenta']};
             transition: width 0.2s, opacity 0.4s;
           }
 
@@ -103,11 +103,11 @@ export const Main = styled.main`
       margin: auto 1rem 1rem;
       padding-top: 1rem;
       width: 100%;
-      border-top: solid 1px var(--gray-100);
+      border-top: solid 1px ${props => props.theme['gray-100']};
 
       p {
         font-size: 0.8rem;
-        color: var(--gray-500);
+        color: ${props => props.theme['gray-500']};
         text-align: center;
       }
     }

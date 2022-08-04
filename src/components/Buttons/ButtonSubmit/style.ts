@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-type Props = {
+interface StatusProps {
   isSendingMessage: boolean
 }
 
-export const ContainerBtnContactMe = styled.div<Props>`
+export const ContainerBtnContactMe = styled.div<StatusProps>`
   background: ${props =>
-    props.isSendingMessage ? 'var(--magenta)' : 'var(--gray-500)'};
+    props.isSendingMessage ? props.theme['magenta'] : props.theme['gray-500']};
 
   padding: 0.5rem 1rem;
   border-radius: 2rem;
@@ -15,7 +15,7 @@ export const ContainerBtnContactMe = styled.div<Props>`
   transition: background-color 0.2s;
 
   button {
-    color: var(--white);
+    color: ${props => props.theme['white']};
     background: none;
     border: 0;
 
@@ -27,10 +27,10 @@ export const ContainerBtnContactMe = styled.div<Props>`
   }
 
   > svg {
-    color: var(--white);
+    color: ${props => props.theme['white']};
   }
 
   &:hover {
-    background-color: var(--magenta);
+    background-color: ${props => props.theme['magenta']};
   }
 `
