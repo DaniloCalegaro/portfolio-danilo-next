@@ -2,6 +2,15 @@
   "repos": [
     {
       "id": 1,
+      "name": "Coffee Delivery",
+      "created_at": "agosto de 2022",
+      "html_url": "https://github.com/DaniloCalegaro/coffee-delivery-react",
+      "url_image_portfolio": "/imgProjects/coffee-delivery.jpg",
+      "tags": "React | TypeScript | Styled-components | Context-API",
+      "preview_url": "https://coffee-delivery-react.vercel.app/"
+    },
+    {
+      "id": 2,
       "name": "Dashgo",
       "created_at": "julho de 2022",
       "html_url": "https://github.com/DaniloCalegaro/dashgo-next-chakra-ui",
@@ -10,7 +19,7 @@
       "preview_url": "https://dashgo-next-chakra-ui.vercel.app/"
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Restaurant",
       "created_at": "julho de 2022",
       "html_url": "https://github.com/DaniloCalegaro/restaurant-refactoring-react-ts",
@@ -19,7 +28,7 @@
       "preview_url": ""
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Carrinho de Compras",
       "created_at": "julho de 2022",
       "html_url": "https://github.com/DaniloCalegaro/carrinho-de-compras-reactjs",
@@ -28,7 +37,7 @@
       "preview_url": ""
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "DtMoney",
       "created_at": "julho de 2022",
       "html_url": "https://github.com/DaniloCalegaro/dtmoney-react-ts",
@@ -38,7 +47,7 @@
     },
 
     {
-      "id": 5,
+      "id": 6,
       "name": "Timer-Pomodo",
       "created_at": "agosto de 2022",
       "html_url": "https://github.com/DaniloCalegaro/timer-pomodoro-react",
@@ -48,7 +57,7 @@
     },
 
     {
-      "id": 6,
+      "id": 7,
       "name": "ToDo",
       "created_at": "julho de 2022",
       "html_url": "https://github.com/DaniloCalegaro/to-do-react-ts",
@@ -57,7 +66,7 @@
       "preview_url": "https://to-do-react-ts.vercel.app/"
     },
     {
-      "id": 7,
+      "id": 8,
       "name": "JobList",
       "created_at": "julho de 2022",
       "html_url": "https://github.com/DaniloCalegaro/job-listings",
@@ -66,7 +75,7 @@
       "preview_url": "https://job-listings-flame.vercel.app/"
     },
     {
-      "id": 8,
+      "id": 9,
       "name": "Animated Countdown",
       "created_at": "julho de 2022",
       "html_url": "https://github.com/DaniloCalegaro/animated-countdown",
