@@ -52,7 +52,8 @@ Contudo foram várias semanas para desenvolvimento e grandes desafios que foram 
 - [yarn](https://yarnpkg.com/) - Gerenciador de pacotes do projeto.
 - [NextJS](https://nextjs.org/) - Framework React.
 - [TypeScrip](https://www.typescriptlang.org/) - Uma linguagem de programação fortemente tipada que se baseia em JavaScript.
-- [EmailJS](https://www.emailjs.com/) - Animações de movimento.
+- [PhosphorIcons](https://phosphoricons.com/) - Pacote de ícones 
+- [Framer Motion](https://www.framer.com/motion/) - Animações de movimento.
 - [React Hook Form](https://react-hook-form.com/) - Validação dos campos do formulário.
 - [YUP](https://github.com/jquense/yup) - Construtor de esquema para análise e validação
 - [EmailJS](https://www.emailjs.com/) - Envios de e-mails diretamente do JavaScript
