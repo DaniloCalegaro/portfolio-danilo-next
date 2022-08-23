@@ -26,24 +26,6 @@ export const Info = styled(motion.div)`
     margin: 1.2rem 0;
   }
 
-  .details {
-    p {
-      display: inline-flex;
-      gap: 1rem;
-
-      strong {
-        color: ${props => props.theme['black']};
-        transition: color 0.2s;
-      }
-    }
-
-    a:hover {
-      strong {
-        color: ${props => props.theme['magenta']};
-      }
-    }
-  }
-
   @media (min-width: 720px) {
     max-width: 70vw;
   }
@@ -54,6 +36,24 @@ export const Info = styled(motion.div)`
 
   @media (min-width: 1440px) {
     max-width: 35vw;
+  }
+`
+
+export const Details = styled(motion.div)`
+  p {
+    display: inline-flex;
+    gap: 1rem;
+
+    strong {
+      color: ${props => props.theme['black']};
+      transition: color 0.2s;
+    }
+  }
+
+  a:hover {
+    strong {
+      color: ${props => props.theme['magenta']};
+    }
   }
 `
 

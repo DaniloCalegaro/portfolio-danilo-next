@@ -1,4 +1,10 @@
-import { BackgroundDev, ContainerInitial, ImgProfile, Info } from './styles'
+import {
+  BackgroundDev,
+  ContainerInitial,
+  Details,
+  ImgProfile,
+  Info
+} from './styles'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../../motion/variants'
 
@@ -19,7 +25,7 @@ export function Initial() {
           Nos últimos 15 anos como designer de produto e a agora como
           desenvolvedor front-end
         </motion.p>
-        <motion.div className="details" variants={fadeIn('up')}>
+        <Details variants={fadeIn('up')}>
           <p>
             <a href="#projects">
               <strong>Ver Projetos</strong>
@@ -29,7 +35,7 @@ export function Initial() {
               <strong>Leia Sobre Mim</strong>
             </a>
           </p>
-        </motion.div>
+        </Details>
       </Info>
 
       <ImgProfile initial={{ opacity: 0 }} animate={{ opacity: 1 }}>

@@ -9,27 +9,18 @@ export const ContainerWait = styled.div`
   background: ${props => props.theme['black']};
 
   position: relative;
+`
+export const WraperContainer = styled.div`
+  max-width: 1280px;
+  height: 100%;
+  padding: 2rem 1.5rem;
+  margin: 0 auto;
 
-  .containerInfos {
-    max-width: 1280px;
-    height: 100%;
-    padding: 2rem 1.5rem;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .containerPageLoading {
-      .index {
-        color: ${props => props.theme['white']};
-        display: block;
-        font-size: 1.2rem;
-      }
-
-      .title {
-        color: ${props => props.theme['white']};
-      }
-    }
+  .title {
+    color: ${props => props.theme['white']};
   }
 `

@@ -42,10 +42,6 @@ export const ContainerFooter = styled.footer`
       }
     }
   }
-
-  .contacts {
-    max-width: 20rem;
-  }
 `
 
 export const Contacts = styled(motion.div)`

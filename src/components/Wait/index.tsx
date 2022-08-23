@@ -2,7 +2,7 @@ import { CSSProperties, useEffect } from 'react'
 import Modal from 'react-modal'
 import { BounceLoader } from 'react-spinners'
 import { Logo } from '../Logo'
-import { ContainerWait } from './styles'
+import { ContainerWait, WraperContainer } from './styles'
 
 const override: CSSProperties = {
   margin: '0 auto'
@@ -44,7 +44,7 @@ export function WaitModal({ modalIsOpen, setModalIsOpen }: WaitModalProps) {
       closeTimeoutMS={1000}
     >
       <ContainerWait>
-        <div className="containerInfos">
+        <WraperContainer>
           <Logo isBaseDark />
           <BounceLoader
             color={'#878a8f'}
@@ -52,11 +52,9 @@ export function WaitModal({ modalIsOpen, setModalIsOpen }: WaitModalProps) {
             cssOverride={override}
             size={150}
           />
-          <div className="containerPageLoading">
-            {/* <span className="index">Bem vindo</span> */}
-            <strong className="title">Espere um segundo</strong>
-          </div>
-        </div>
+
+          <strong className="title">Espere um segundo</strong>
+        </WraperContainer>
       </ContainerWait>
     </Modal>
   )

@@ -55,9 +55,6 @@ export function ProjectsSelected() {
   const formattedDate = (date: string) =>
     format(parseISO(date), "MMMM ' de ' yyyy", { locale: ptBr })
 
-  // const splitString = (stringToSplit: string, separator: string) =>
-  //   stringToSplit.split(separator)
-
   const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1)
 
   return (

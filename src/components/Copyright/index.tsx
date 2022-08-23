@@ -1,15 +1,15 @@
-import { ContainerCopyright } from './styles'
+import { ContainerCopyright, InfoCopyright, LogoCopyright } from './styles'
 
 export function Copyright() {
   return (
     <ContainerCopyright>
-      <div className="logoCopyright">
+      <LogoCopyright>
         <strong>DC</strong>
-      </div>
-      <div className="infoCopyright">
+      </LogoCopyright>
+      <InfoCopyright>
         <span>© 2022 Danilo Calegaro</span>
         <p>Feito com ♥ em Batatais - SP, Brasil.</p>
-      </div>
+      </InfoCopyright>
     </ContainerCopyright>
   )
 }
