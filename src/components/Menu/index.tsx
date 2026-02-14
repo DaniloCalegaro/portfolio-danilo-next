@@ -63,24 +63,16 @@ export function Menu() {
                 variants={moveMenuItemVariants}
               >
                 <li>
-                  <Link href="/#header">
-                    <a>Início</a>
-                  </Link>
+                  <Link href="/#header">Início</Link>
                 </li>
                 <li>
-                  <Link href="/#aboutMe">
-                    <a>Sobre Mim</a>
-                  </Link>
+                  <Link href="/#aboutMe">Sobre Mim</Link>
                 </li>
                 <li>
-                  <Link href="/#projects">
-                    <a>Meus trabalhos</a>
-                  </Link>
+                  <Link href="/#projects">Meus trabalhos</Link>
                 </li>
                 <li>
-                  <Link href="/contact">
-                    <a>Contato </a>
-                  </Link>
+                  <Link href="/contact">Contato </Link>
                 </li>
               </motion.ul>
               <motion.footer
@@ -90,7 +82,7 @@ export function Menu() {
                 variants={moveMenuItemVariants}
               >
                 <p>
-                  © 2022 Danilo Calegaro. Feito com ♥ em Batatais - SP, Brasil.
+                  © 2026 Danilo Calegaro. Feito com ♥ em Batatais - SP, Brasil.
                 </p>
               </motion.footer>
             </motion.nav>

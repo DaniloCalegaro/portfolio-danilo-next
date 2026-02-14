@@ -1,12 +1,11 @@
-import { ArrowRight, CircleNotch } from 'phosphor-react'
-import { ElementType, HTMLAttributeAnchorTarget, ReactNode } from 'react'
-import { ContainerBtnContactMe } from './style'
+import { ArrowRight, CircleNotch } from "phosphor-react";
+import { ElementType, HTMLAttributeAnchorTarget, ReactNode } from "react";
+import { ContainerBtnContactMe } from "./style";
 
-interface ButtonSubmitProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  name?: string
+interface ButtonSubmitProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  name?: string;
   //icon?: React.ReactNode
-  isSendingMessage?: boolean
+  isSendingMessage?: boolean;
 }
 
 export function ButtonSubmit({
@@ -15,12 +14,12 @@ export function ButtonSubmit({
   ...rest
 }: ButtonSubmitProps) {
   return (
-    <ContainerBtnContactMe isSendingMessage={isSendingMessage}>
+    <ContainerBtnContactMe $isSendingMessage={isSendingMessage}>
       <button type="submit" {...rest} disabled={isSendingMessage}>
-        {isSendingMessage ? 'Enviando mensagem...' : name}
+        {isSendingMessage ? "Enviando mensagem..." : name}
         {isSendingMessage ? (
           <CircleNotch size={20}>
-            {' '}
+            {" "}
             <animateTransform
               attributeName="transform"
               attributeType="XML"
@@ -36,5 +35,5 @@ export function ButtonSubmit({
         )}
       </button>
     </ContainerBtnContactMe>
-  )
+  );
 }

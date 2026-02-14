@@ -8,7 +8,7 @@ interface LogoProps {
 export function Logo({ isBaseDark = false }: LogoProps) {
   return (
     <Link href="/">
-      <ContainerLogo isBaseDark={isBaseDark}>
+      <ContainerLogo $isBaseDark={isBaseDark}>
         <div className="design">
           <strong>DC</strong>
         </div>
