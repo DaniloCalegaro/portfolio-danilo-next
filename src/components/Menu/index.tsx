@@ -1,16 +1,16 @@
-import Link from 'next/link'
-import { AnimatePresence, useCycle, motion } from 'framer-motion'
-import { List, X } from 'phosphor-react'
-import { moveMenu, moveMenuItemVariants } from '../../motion/variants'
-import { Logo } from '../Logo'
-import { ContainerMenuSideBar, Main } from './styles'
+import Link from "next/link";
+import { AnimatePresence, useCycle, motion } from "framer-motion";
+import { List, X } from "phosphor-react";
+import { moveMenu, moveMenuItemVariants } from "../../motion/variants";
+import { Logo } from "../Logo";
+import { ContainerMenuSideBar, Main } from "./styles";
 
 export function Menu() {
-  const [open, cycleOpen] = useCycle(false, true)
+  const [open, cycleOpen] = useCycle(false, true);
 
   function handleOpenMenu() {
-    document.body.style.overflowY = open ? 'scroll' : 'hidden'
-    cycleOpen()
+    document.body.style.overflowY = open ? "scroll" : "hidden";
+    cycleOpen();
   }
 
   return (
@@ -74,7 +74,7 @@ export function Menu() {
                 </li>
                 <li>
                   <Link href="/#projects">
-                    <a>Projetos</a>
+                    <a>Meus trabalhos</a>
                   </Link>
                 </li>
                 <li>
@@ -98,5 +98,5 @@ export function Menu() {
         </AnimatePresence>
       </Main>
     </ContainerMenuSideBar>
-  )
+  );
 }

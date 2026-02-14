@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import { ContainerLogo } from './styles'
+import Link from "next/link";
+import { ContainerLogo } from "./styles";
 
 interface LogoProps {
-  isBaseDark?: boolean
+  isBaseDark?: boolean;
 }
 
 export function Logo({ isBaseDark = false }: LogoProps) {
@@ -14,9 +14,9 @@ export function Logo({ isBaseDark = false }: LogoProps) {
         </div>
         <div className="info">
           <strong className="name">Danilo Calegaro</strong>
-          <span className="description">Front-end developer</span>
+          <span className="description">Full Stack Developer</span>
         </div>
       </ContainerLogo>
     </Link>
-  )
+  );
 }
