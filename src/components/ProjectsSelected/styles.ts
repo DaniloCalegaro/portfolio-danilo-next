@@ -70,7 +70,6 @@ export const SwiperBox = styled(motion.div)`
     .tags {
       color: ${(props) => props.theme["gray-500"]};
       font-size: 0.7rem;
-      //position: absolute;
     }
   }
 

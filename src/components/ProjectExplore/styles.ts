@@ -21,7 +21,6 @@ export const ProjectCard = styled(motion.div)`
     border-color: ${(props) => props.theme["magenta"]};
   }
 
-  /* Decorative radial gradient */
   &::before {
     content: "";
     position: absolute;

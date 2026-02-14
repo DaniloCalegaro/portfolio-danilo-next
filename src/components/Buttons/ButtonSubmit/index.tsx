@@ -1,10 +1,8 @@
 import { ArrowRight, CircleNotch } from "phosphor-react";
-import { ElementType, HTMLAttributeAnchorTarget, ReactNode } from "react";
 import { ContainerBtnContactMe } from "./style";
 
 interface ButtonSubmitProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   name?: string;
-  //icon?: React.ReactNode
   isSendingMessage?: boolean;
 }
 
