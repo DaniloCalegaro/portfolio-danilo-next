@@ -1,20 +1,20 @@
-import React, { FC, forwardRef } from 'react'
-import { FieldError } from 'react-hook-form'
-import { ContainerInput } from './styles'
+import { FC, forwardRef } from "react";
+import { FieldError } from "react-hook-form";
+import { ContainerInput } from "./styles";
 
-export type InputType = 'text' | 'email' | 'password'
+export type InputType = "text" | "email" | "password";
 
 export type InputProps = {
-  id: string
-  name: string
-  label?: string
-  type?: InputType
-  placeholder?: string
-  error?: FieldError
-}
+  id: string;
+  name: string;
+  label?: string;
+  type?: InputType;
+  placeholder?: string;
+  error?: FieldError;
+};
 
 const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
-  ({ id, name, label, type = 'text', placeholder, error, ...props }, ref) => {
+  ({ id, name, label, type = "text", placeholder, error, ...props }, ref) => {
     return (
       <ContainerInput>
         {label && <label htmlFor={id}>{label}</label>}
@@ -28,10 +28,10 @@ const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
         />
         {error && <span>{error.message}</span>}
       </ContainerInput>
-    )
-  }
-)
+    );
+  },
+);
 
-Input.displayName = 'Input'
+Input.displayName = "Input";
 
-export default Input
+export default Input;

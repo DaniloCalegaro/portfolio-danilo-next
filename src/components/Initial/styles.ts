@@ -1,15 +1,15 @@
-import { motion } from 'framer-motion'
-import styled from 'styled-components'
+import { motion } from "framer-motion";
+import styled from "styled-components";
 
 export const ContainerInitial = styled.section`
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const Info = styled(motion.div)`
   max-width: 100vw;
 
-  margin-top: max(7.8rem, calc(100vh - 400px));
+  margin-top: max(7.8rem, calc(100vh - 450px));
 
   span {
     display: block;
@@ -17,7 +17,7 @@ export const Info = styled(motion.div)`
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 1rem;
-    color: ${props => props.theme['black']};
+    color: ${(props) => props.theme["black"]};
   }
 
   > p {
@@ -37,7 +37,7 @@ export const Info = styled(motion.div)`
   @media (min-width: 1440px) {
     max-width: 35vw;
   }
-`
+`;
 
 export const Details = styled(motion.div)`
   p {
@@ -45,17 +45,17 @@ export const Details = styled(motion.div)`
     gap: 1rem;
 
     strong {
-      color: ${props => props.theme['black']};
+      color: ${(props) => props.theme["black"]};
       transition: color 0.2s;
     }
   }
 
   a:hover {
     strong {
-      color: ${props => props.theme['magenta']};
+      color: ${(props) => props.theme["magenta"]};
     }
   }
-`
+`;
 
 export const ImgProfile = styled(motion.div)`
   position: absolute;
@@ -85,7 +85,7 @@ export const ImgProfile = styled(motion.div)`
       width: 900px;
     }
   }
-`
+`;
 
 export const BackgroundDev = styled(motion.div)`
   position: absolute;
@@ -99,7 +99,7 @@ export const BackgroundDev = styled(motion.div)`
 
   strong {
     font-size: calc(18vw);
-    color: ${props => props.theme['white']};
+    color: ${(props) => props.theme["white"]};
     text-shadow: 0px 0px 80px rgba(0, 0, 0, 0.1);
   }
-`
+`;

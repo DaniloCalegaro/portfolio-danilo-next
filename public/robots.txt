@@ -1,0 +1,11 @@
+# robots.txt - Danilo Calegaro Portfolio
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow API routes
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://danilocalegaro.dev.br/sitemap.xml

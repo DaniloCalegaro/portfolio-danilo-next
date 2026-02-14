@@ -1,10 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const ContainerIndex = styled.div`
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  //border: solid 1px;
 
   .buttonsControl {
     .btnScrool {
@@ -13,13 +12,7 @@ export const ContainerIndex = styled.div`
       right: calc(100vw / 2);
       z-index: 10;
     }
-    /* .btnContactMe {
-      margin: 0 1rem;
-      position: fixed;
-      bottom: 1rem;
-      left: 0;
-      z-index: 10;
-    } */
+
     .btnUp {
       margin: 0 1rem;
       position: fixed;
@@ -35,8 +28,8 @@ export const ContainerIndex = styled.div`
     left: 0;
     right: 0;
     height: 2px;
-    background: ${props => props.theme['magenta']};
+    background: ${(props) => props.theme["magenta"]};
     transform-origin: 0%;
     z-index: 10;
   }
-`
+`;

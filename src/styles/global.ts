@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   * {
@@ -7,35 +7,24 @@ export default createGlobalStyle`
     box-sizing: border-box;
     outline: 0;
   }
-
-  /* :root {
-    --white: #ffffff;
-    --gray-100: #cfd0d2;
-    --gray-200: #b7b8bb;
-    --gray-500: #878a8f;
-    --gray-800: #434447;
-    --black: #0f141e;
-    --magenta: #ff3366;
-    --error: #EC3B14;
-  } */
-
+  
   ::-webkit-scrollbar {
     width: 0.5rem;
   }
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: ${props => props.theme['gray-100']}; 
+    background: ${(props) => props.theme["gray-100"]}; 
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: ${props => props.theme['gray-500']}; 
+    background: ${(props) => props.theme["gray-500"]}; 
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: ${props => props.theme['gray-800']}; 
+    background: ${(props) => props.theme["gray-800"]}; 
   }
 
   html {
@@ -50,8 +39,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${props => props.theme['white']};
-    color: ${props => props.theme['black']};
+    background: ${(props) => props.theme["white"]};
+    color: ${(props) => props.theme["black"]};
     -webkit-font-smoothing: antialiased;
   }
 
@@ -66,7 +55,7 @@ export default createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${props => props.theme['black']};
+    color: ${(props) => props.theme["black"]};
   }
 
   button, a {
@@ -74,7 +63,7 @@ export default createGlobalStyle`
   }
 
   span {
-    color: ${props => props.theme['gray-500']};
+    color: ${(props) => props.theme["gray-500"]};
   }
 
   section + section {
@@ -91,7 +80,7 @@ export default createGlobalStyle`
   .title {
     font-size: 3rem;
     line-height: 3.4rem;
-    color: ${props => props.theme['black']};
+    color: ${(props) => props.theme["black"]};
   }
 
   .ReactModal__Overlay {
@@ -108,17 +97,18 @@ export default createGlobalStyle`
   }
 
   #nprogress .bar {
-  background: ${props => props.theme['magenta']} !important;
+  background: ${(props) => props.theme["magenta"]} !important;
 }
 
 #nprogress .peg {
-  box-shadow: 0 0 10px ${props => props.theme['magenta']}, 0 0 5px ${props =>
-  props.theme['magenta']};
+  box-shadow: 0 0 10px ${(props) => props.theme["magenta"]}, 0 0 5px ${(
+    props,
+  ) => props.theme["magenta"]};
 }
 
 #nprogress .spinner-icon {
-  border-top-color: ${props => props.theme['magenta']};
-  border-left-color: ${props => props.theme['magenta']};
+  border-top-color: ${(props) => props.theme["magenta"]};
+  border-left-color: ${(props) => props.theme["magenta"]};
 }
 
   @media (min-width: 720px) {
@@ -134,4 +124,4 @@ export default createGlobalStyle`
       line-height: 4rem;
     }
   }
-`
+`;

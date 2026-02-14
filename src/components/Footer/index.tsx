@@ -3,29 +3,29 @@ import {
   GithubLogo,
   InstagramLogo,
   LinkedinLogo,
-  WhatsappLogo
-} from 'phosphor-react'
-import { motion } from 'framer-motion'
-import { fadeIn } from '../../motion/variants'
-import ButtonRedirect from '../Buttons/ButtonRedirect'
+  WhatsappLogo,
+} from "phosphor-react";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../motion/variants";
+import ButtonRedirect from "../Buttons/ButtonRedirect";
 
-import { Contacts, ContainerFooter, SocialNetworks } from './styles'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
+import { Contacts, ContainerFooter, SocialNetworks } from "./styles";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 export function Footer() {
-  const { asPath } = useRouter()
+  const { asPath } = useRouter();
 
-  let isActive = false
+  let isActive = false;
 
-  if (asPath.startsWith('/contact')) {
-    isActive = true
+  if (asPath.startsWith("/contact")) {
+    isActive = true;
   }
 
   return (
     <ContainerFooter>
       <Contacts
-        variants={fadeIn('up')}
+        variants={fadeIn("up")}
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0 }}
@@ -51,7 +51,7 @@ export function Footer() {
 
       <SocialNetworks
         className="socialNetworks"
-        variants={fadeIn('up')}
+        variants={fadeIn("up")}
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0 }}
@@ -97,5 +97,5 @@ export function Footer() {
         </ul>
       </SocialNetworks>
     </ContainerFooter>
-  )
+  );
 }

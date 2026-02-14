@@ -1,16 +1,16 @@
-import { FC, forwardRef, ReactNode } from 'react'
-import { FieldError } from 'react-hook-form'
-import { ContainerSelect } from './styles'
+import { FC, forwardRef, ReactNode } from "react";
+import { FieldError } from "react-hook-form";
+import { ContainerSelect } from "./styles";
 
 interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
-  label?: string
-  id: string
-  children: ReactNode
-  error?: FieldError
+  label?: string;
+  id: string;
+  children: ReactNode;
+  error?: FieldError;
 }
 
 const Select: FC<SelectProps> = forwardRef<HTMLSelectElement, SelectProps>(
-  ({ id, name, label, placeholder, children, error, ...props }, ref) => {
+  ({ id, name, label, children, error, ...props }, ref) => {
     return (
       <ContainerSelect>
         {label && <label>{label}</label>}
@@ -19,10 +19,10 @@ const Select: FC<SelectProps> = forwardRef<HTMLSelectElement, SelectProps>(
         </select>
         {error && <span>{error.message}</span>}
       </ContainerSelect>
-    )
-  }
-)
+    );
+  },
+);
 
-Select.displayName = 'Select'
+Select.displayName = "Select";
 
-export default Select
+export default Select;

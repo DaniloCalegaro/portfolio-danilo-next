@@ -3,32 +3,32 @@ import {
   ContainerInitial,
   Details,
   ImgProfile,
-  Info
-} from './styles'
-import { motion } from 'framer-motion'
-import { fadeIn } from '../../motion/variants'
+  Info,
+} from "./styles";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../motion/variants";
 
 export function Initial() {
   return (
     <ContainerInitial>
       <Info
-        variants={fadeIn('up')}
+        variants={fadeIn("up")}
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0 }}
       >
-        <motion.span variants={fadeIn('up')}>Danilo Calegaro</motion.span>
-        <motion.h1 className="title" variants={fadeIn('up')}>
-          Desenvolvedor Front End
+        <motion.span variants={fadeIn("up")}>Danilo Calegaro</motion.span>
+        <motion.h1 className="title" variants={fadeIn("up")}>
+          Desenvolvedor Full Stack
         </motion.h1>
-        <motion.p variants={fadeIn('up')}>
-          Nos últimos 15 anos como designer de produto e a agora como
-          desenvolvedor front-end
+        <motion.p variants={fadeIn("up")}>
+          Há mais de 15 anos criando experiências e, nos últimos 4,
+          transformando essas experiências em produtos digitais completos
         </motion.p>
-        <Details variants={fadeIn('up')}>
+        <Details variants={fadeIn("up")}>
           <p>
             <a href="#projects">
-              <strong>Ver Projetos</strong>
+              <strong>Explore meu trabalho</strong>
             </a>
             ou
             <a href="#aboutMe">
@@ -46,5 +46,5 @@ export function Initial() {
         <strong>developer</strong>
       </BackgroundDev>
     </ContainerInitial>
-  )
+  );
 }
