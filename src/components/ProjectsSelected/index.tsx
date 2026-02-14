@@ -1,79 +1,79 @@
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
-import { format, parseISO } from 'date-fns'
-import ptBr from 'date-fns/locale/pt'
-import ButtonRedirect from '../Buttons/ButtonRedirect'
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { format, parseISO } from "date-fns";
+import ptBr from "date-fns/locale/pt";
+import ButtonRedirect from "../Buttons/ButtonRedirect";
 
-import repositoriesJson from '../../../repositories.json'
+import repositoriesJson from "../../../repositories.json";
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Mousewheel, Navigation, Pagination } from 'swiper'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Mousewheel, Navigation, Pagination } from "swiper";
 
-import { motion } from 'framer-motion'
-import { fadeIn } from '../../motion/variants'
+import { motion } from "framer-motion";
+import { fadeIn } from "../../motion/variants";
 
-import { GithubLogo } from 'phosphor-react'
+import { GithubLogo } from "phosphor-react";
 
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import {
   ButtonMoreProjects,
   ContainerProjectsSelected,
-  SwiperBox
-} from './styles'
+  SwiperBox,
+} from "./styles";
 interface ApiGithubRepos {
-  id: number
-  name: string
-  created_at: string
-  htmlUrl: string
-  urlImagePortfolio: string
-  tags: string
-  previewUrl: string
+  id: number;
+  name: string;
+  created_at: string;
+  htmlUrl: string;
+  urlImagePortfolio: string;
+  tags: string;
+  previewUrl: string;
 }
 
 export function ProjectsSelected() {
-  const [repositories, setRepositories] = useState<ApiGithubRepos[]>([])
+  const [repositories, setRepositories] = useState<ApiGithubRepos[]>([]);
 
   useEffect(() => {
     async function chargeRepositories() {
-      const data = repositoriesJson.repos.map(project => ({
+      const data = repositoriesJson.repos.map((project) => ({
         id: project.id,
         name: project.name,
         created_at: project.created_at,
         htmlUrl: project.html_url,
         urlImagePortfolio: project.url_image_portfolio,
         tags: project.tags,
-        previewUrl: project.preview_url
-      }))
-      setRepositories(data)
+        previewUrl: project.preview_url,
+      }));
+      setRepositories(data);
     }
-    chargeRepositories()
-  }, [])
+    chargeRepositories();
+  }, []);
 
   const formattedDate = (date: string) =>
-    format(parseISO(date), "MMMM ' de ' yyyy", { locale: ptBr })
+    format(parseISO(date), "MMMM ' de ' yyyy", { locale: ptBr });
 
-  const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1)
+  const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1);
 
   return (
     <ContainerProjectsSelected
       id="projects"
-      variants={fadeIn('up')}
+      variants={fadeIn("up")}
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0 }}
     >
-      <motion.span className="index" variants={fadeIn('up')}>
+      <motion.span className="index" variants={fadeIn("up")}>
         Projetos selecionados
       </motion.span>
-      <motion.strong className="title" variants={fadeIn('up')}>
+      <motion.strong className="title" variants={fadeIn("up")}>
         Estudos front-end
       </motion.strong>
 
       <SwiperBox
-        variants={fadeIn('up')}
+        variants={fadeIn("up")}
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0 }}
@@ -82,25 +82,25 @@ export function ProjectsSelected() {
           breakpoints={{
             640: {
               slidesPerView: 1,
-              slidesPerGroup: 1
+              slidesPerGroup: 1,
             },
             768: {
               slidesPerView: 2,
-              slidesPerGroup: 2
-            }
+              slidesPerGroup: 2,
+            },
           }}
           spaceBetween={30}
           loop={false}
           loopFillGroupWithBlank={false}
           pagination={{
-            clickable: true
+            clickable: true,
           }}
           navigation={true}
           mousewheel={true}
           preloadImages={true}
           modules={[Pagination, Navigation, Mousewheel]}
         >
-          {repositories.map(repository => (
+          {repositories.map((repository) => (
             <SwiperSlide key={repository.id}>
               <div className="detailsProjects">
                 <div className="info">
@@ -148,5 +148,5 @@ export function ProjectsSelected() {
         />
       </ButtonMoreProjects>
     </ContainerProjectsSelected>
-  )
+  );
 }

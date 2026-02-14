@@ -1,16 +1,16 @@
-import Link from 'next/link'
-import { AnimatePresence, useCycle, motion } from 'framer-motion'
-import { List, X } from 'phosphor-react'
-import { moveMenu, moveMenuItemVariants } from '../../motion/variants'
-import { Logo } from '../Logo'
-import { ContainerMenuSideBar, Main } from './styles'
+import Link from "next/link";
+import { AnimatePresence, useCycle, motion } from "framer-motion";
+import { List, X } from "phosphor-react";
+import { moveMenu, moveMenuItemVariants } from "../../motion/variants";
+import { Logo } from "../Logo";
+import { ContainerMenuSideBar, Main } from "./styles";
 
 export function Menu() {
-  const [open, cycleOpen] = useCycle(false, true)
+  const [open, cycleOpen] = useCycle(false, true);
 
   function handleOpenMenu() {
-    document.body.style.overflowY = open ? 'scroll' : 'hidden'
-    cycleOpen()
+    document.body.style.overflowY = open ? "scroll" : "hidden";
+    cycleOpen();
   }
 
   return (
@@ -63,24 +63,16 @@ export function Menu() {
                 variants={moveMenuItemVariants}
               >
                 <li>
-                  <Link href="/#header">
-                    <a>Início</a>
-                  </Link>
+                  <Link href="/#header">Início</Link>
                 </li>
                 <li>
-                  <Link href="/#aboutMe">
-                    <a>Sobre Mim</a>
-                  </Link>
+                  <Link href="/#aboutMe">Sobre Mim</Link>
                 </li>
                 <li>
-                  <Link href="/#projects">
-                    <a>Projetos</a>
-                  </Link>
+                  <Link href="/#projects">Meus trabalhos</Link>
                 </li>
                 <li>
-                  <Link href="/contact">
-                    <a>Contato </a>
-                  </Link>
+                  <Link href="/contact">Contato </Link>
                 </li>
               </motion.ul>
               <motion.footer
@@ -90,7 +82,7 @@ export function Menu() {
                 variants={moveMenuItemVariants}
               >
                 <p>
-                  © 2022 Danilo Calegaro. Feito com ♥ em Batatais - SP, Brasil.
+                  © 2026 Danilo Calegaro. Feito com ♥ em Batatais - SP, Brasil.
                 </p>
               </motion.footer>
             </motion.nav>
@@ -98,5 +90,5 @@ export function Menu() {
         </AnimatePresence>
       </Main>
     </ContainerMenuSideBar>
-  )
+  );
 }

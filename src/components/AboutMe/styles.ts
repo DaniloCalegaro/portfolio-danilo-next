@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
-import styled from 'styled-components'
+import { motion } from "framer-motion";
+import styled from "styled-components";
 
 export const ContainerAboutMe = styled(motion.section)`
   //margin-top: 4rem;
@@ -15,14 +15,17 @@ export const ContainerAboutMe = styled(motion.section)`
   }
 
   span {
-    color: ${props => props.theme['gray-800']};
+    color: ${(props) => props.theme["gray-800"]};
   }
 
-  span:last-child {
+  p {
+    color: ${(props) => props.theme["gray-800"]};
+    margin-bottom: 1rem;
     width: 80%;
     text-align: center;
+    line-height: 1.6rem;
   }
-`
+`;
 export const ContainerskillsComponent = styled(motion.section)`
   margin-top: 2rem;
   display: flex;
@@ -39,9 +42,9 @@ export const ContainerskillsComponent = styled(motion.section)`
   }
 
   &::before {
-    content: '';
+    content: "";
     width: 100%;
-    border-top: solid 1px ${props => props.theme['gray-100']};
+    border-top: solid 1px ${(props) => props.theme["gray-100"]};
     margin-bottom: 2rem;
   }
 
@@ -53,4 +56,4 @@ export const ContainerskillsComponent = styled(motion.section)`
       }
     }
   }
-`
+`;
